@@ -1350,6 +1350,35 @@
       return 0;
     }
 
+    // Formas regionales: [nombre, id_api, generacion]
+    var REGIONAL_FORMS = [
+      ['rattata-alola', 10091, 7], ['raticate-alola', 10092, 7],
+      ['raichu-alola', 10100, 7], ['sandshrew-alola', 10101, 7], ['sandslash-alola', 10102, 7],
+      ['vulpix-alola', 10103, 7], ['ninetales-alola', 10104, 7],
+      ['diglett-alola', 10105, 7], ['dugtrio-alola', 10106, 7],
+      ['meowth-alola', 10107, 7], ['persian-alola', 10108, 7],
+      ['geodude-alola', 10109, 7], ['graveler-alola', 10110, 7], ['golem-alola', 10111, 7],
+      ['grimer-alola', 10112, 7], ['muk-alola', 10113, 7],
+      ['exeggutor-alola', 10114, 7], ['marowak-alola', 10115, 7],
+      ['meowth-galar', 10161, 8], ['ponyta-galar', 10162, 8], ['rapidash-galar', 10163, 8],
+      ['slowpoke-galar', 10164, 8], ['slowbro-galar', 10165, 8],
+      ['farfetchd-galar', 10166, 8], ['weezing-galar', 10167, 8], ['mr-mime-galar', 10168, 8],
+      ['articuno-galar', 10169, 8], ['zapdos-galar', 10170, 8], ['moltres-galar', 10171, 8],
+      ['slowking-galar', 10172, 8], ['corsola-galar', 10173, 8],
+      ['zigzagoon-galar', 10174, 8], ['linoone-galar', 10175, 8],
+      ['darumaka-galar', 10176, 8], ['darmanitan-galar-standard', 10177, 8], ['darmanitan-galar-zen', 10178, 8],
+      ['yamask-galar', 10179, 8], ['stunfisk-galar', 10180, 8],
+      ['growlithe-hisui', 10229, 8], ['arcanine-hisui', 10230, 8],
+      ['voltorb-hisui', 10231, 8], ['electrode-hisui', 10232, 8],
+      ['typhlosion-hisui', 10233, 8], ['qwilfish-hisui', 10234, 8], ['sneasel-hisui', 10235, 8],
+      ['samurott-hisui', 10236, 8], ['lilligant-hisui', 10237, 8],
+      ['zorua-hisui', 10238, 8], ['zoroark-hisui', 10239, 8],
+      ['braviary-hisui', 10240, 8], ['sliggoo-hisui', 10241, 8], ['goodra-hisui', 10242, 8],
+      ['avalugg-hisui', 10243, 8], ['decidueye-hisui', 10244, 8],
+      ['tauros-paldea-combat-breed', 10250, 9], ['tauros-paldea-blaze-breed', 10251, 9], ['tauros-paldea-aqua-breed', 10252, 9],
+      ['wooper-paldea', 10253, 9], ['ursaluna-bloodmoon', 10272, 9]
+    ];
+
     // ── POKEAPI ────────────────────────────────────────────────────────────────────
     async function loadPokemon() {
       setLoading(10);
@@ -1365,6 +1394,16 @@
             sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + id + '.png'
           };
         });
+        // Añadir formas regionales
+        REGIONAL_FORMS.forEach(function (f) {
+          var name = f[0], id = f[1], gen = f[2];
+          state.pokemonMap[name] = {
+            name: name, id: id, gen: gen,
+            sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + id + '.png'
+          };
+          state.allPokemon.push(name);
+        });
+        state.allPokemon.sort();
         setLoading(100);
         setTimeout(function () { setLoading(0); }, 500);
         renderArena();
