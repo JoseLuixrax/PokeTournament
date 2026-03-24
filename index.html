@@ -916,7 +916,86 @@
       color: var(--red);
     }
 
-    /* Tooltip */
+    /* BAN SECTION */
+    .ban-section {
+      border-top: 1px solid var(--border);
+      padding: 0.6rem 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(239, 68, 68, 0.04);
+    }
+
+    .ban-label {
+      font-size: 9px;
+      font-family: 'Press Start 2P', monospace;
+      color: #ef4444;
+      opacity: 0.8;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .ban-slot {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px dashed rgba(239, 68, 68, 0.35);
+      border-radius: 8px;
+      padding: 4px 8px;
+      min-height: 36px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .ban-slot:hover {
+      border-color: rgba(239, 68, 68, 0.6);
+      background: rgba(239, 68, 68, 0.14);
+    }
+
+    .ban-slot.has-ban {
+      border-style: solid;
+      border-color: rgba(239, 68, 68, 0.5);
+    }
+
+    .ban-pokemon-img {
+      width: 32px;
+      height: 32px;
+      image-rendering: pixelated;
+      flex-shrink: 0;
+    }
+
+    .ban-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fca5a5;
+      text-transform: capitalize;
+      flex: 1;
+    }
+
+    .ban-placeholder {
+      font-size: 12px;
+      color: rgba(239, 68, 68, 0.45);
+      flex: 1;
+    }
+
+    .ban-clear {
+      background: none;
+      border: none;
+      color: rgba(239, 68, 68, 0.5);
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 1;
+      padding: 2px;
+      transition: color 0.1s;
+      flex-shrink: 0;
+    }
+
+    .ban-clear:hover {
+      color: #ef4444;
+    }
+
     .tooltip {
       position: relative;
     }
@@ -1067,7 +1146,8 @@
       activeTab: null,
       allPokemon: [],
       pokemonMap: {},  // name -> {name, sprite}
-      picks: {}       // picks[tabId][playerId] = [pokemonName x6]
+      picks: {},       // picks[tabId][playerId] = [pokemonName x6]
+      bans: {}         // bans[tabId][playerId] = pokemonName|null
     };
 
     let dragData = null;
@@ -1141,6 +1221,8 @@
         tab.playerNames[player.id] = name;
         if (!state.picks[tab.id]) state.picks[tab.id] = {};
         state.picks[tab.id][player.id] = [null, null, null, null, null, null];
+        if (!state.bans[tab.id]) state.bans[tab.id] = {};
+        state.bans[tab.id][player.id] = null;
       });
       input.value = '';
       renderSidebar();
@@ -1215,10 +1297,12 @@
 
       const tab = { id: tabId, name, matchups: [], playerNames };
 
-      // Initialize picks for this tab
+      // Initialize picks and bans for this tab
       if (!state.picks[tabId]) state.picks[tabId] = {};
+      if (!state.bans[tabId]) state.bans[tabId] = {};
       state.players.forEach(p => {
         state.picks[tabId][p.id] = [null, null, null, null, null, null];
+        state.bans[tabId][p.id] = null;
       });
 
       state.tabs.push(tab);
@@ -1234,6 +1318,7 @@
       }
       state.tabs = state.tabs.filter(t => t.id !== tabId);
       delete state.picks[tabId];
+      delete state.bans[tabId];
       if (state.activeTab === tabId) {
         state.activeTab = state.tabs.length > 0 ? state.tabs[state.tabs.length - 1].id : null;
       }
@@ -1289,6 +1374,21 @@
       return picks;
     }
 
+    // Get all banned pokemon in a tab as a Set
+    function getTabBans(tabId) {
+      const banned = new Set();
+      if (!state.bans[tabId]) return banned;
+      Object.values(state.bans[tabId]).forEach(pk => { if (pk) banned.add(pk); });
+      return banned;
+    }
+
+    function setBan(tabId, pid, pokemon) {
+      if (!state.bans[tabId]) state.bans[tabId] = {};
+      state.bans[tabId][pid] = pokemon || null;
+      renderArena();
+    }
+
+
     function setPick(tabId, pid, slot, pokemon) {
       if (!state.picks[tabId]) state.picks[tabId] = {};
       if (!state.picks[tabId][pid]) state.picks[tabId][pid] = [null, null, null, null, null, null];
@@ -1298,10 +1398,11 @@
     }
 
     // ─── AVAILABLE POKEMON for a player in a slot ───────────────────────────────
-    // Returns [{name, revived, genBlocked, gen}]
+    // Returns [{name, revived, genBlocked, gen, banned}]
     function getAvailablePokemon(tabId, pid, slotIdx) {
       const pastPicks = getPlayerPastPicks(tabId, pid);
       const tabPicks = getTabAllPicks(tabId);
+      const tabBans = getTabBans(tabId);
       const myCurrentPicks = (state.picks[tabId] && state.picks[tabId][pid]) ? state.picks[tabId][pid] : [];
       const currentSelected = myCurrentPicks[slotIdx];
 
@@ -1326,7 +1427,8 @@
           const pkmn = state.pokemonMap[name];
           const gen = pkmn?.gen || 0;
           const genBlocked = gen > 0 && usedGens.has(gen) && name !== currentSelected;
-          return { name, revived: pastPicks.has(name), gen, genBlocked };
+          const banned = tabBans.has(name) && name !== currentSelected;
+          return { name, revived: pastPicks.has(name), gen, genBlocked, banned };
         });
     }
 
@@ -1430,6 +1532,21 @@
 
         const name = getPlayerName(tab.id, pid);
         const myPicks = state.picks[tab.id]?.[pid] || [null, null, null, null, null, null];
+
+        // Ban section vars — computed outside template literal to avoid parser issues
+        const bannedPk = (state.bans[tab.id] && state.bans[tab.id][pid]) ? state.bans[tab.id][pid] : null;
+        const banSprite = bannedPk && state.pokemonMap[bannedPk] ? state.pokemonMap[bannedPk].sprite : '';
+        const banPickerId = ('banpicker_' + tab.id + '_' + pid).replace(/[^a-z0-9_]/gi, '_');
+        const banSectionHtml = `<div class="ban-section">
+      <span class="ban-label">🚫 BAN</span>
+      <div class="ban-slot ${bannedPk ? 'has-ban' : ''}"
+        id="${banPickerId}"
+        onclick="toggleBanPicker('${banPickerId}','${tab.id}','${pid}',event)">
+        ${bannedPk && banSprite ? `<img class="ban-pokemon-img" src="${banSprite}" alt="${bannedPk}" onerror="this.style.display='none'">` : ''}
+        ${bannedPk ? `<span class="ban-name">${capitalize(bannedPk)}</span>` : `<span class="ban-placeholder">Elegir pokémon a banear...</span>`}
+      </div>
+      ${bannedPk ? `<button class="ban-clear" onclick="event.stopPropagation();setBan('${tab.id}','${pid}',null)" title="Quitar ban">×</button>` : ''}
+    </div>`;
         const picksHtml = [0, 1, 2, 3, 4, 5].map(pi => {
           const selected = myPicks[pi];
           const available = getAvailablePokemon(tab.id, pid, pi);
@@ -1470,6 +1587,7 @@
         <div class="card-body">
           <div class="picks-grid">${picksHtml}</div>
         </div>
+        ${banSectionHtml}
       </div>
     </div>`;
       });
@@ -1655,9 +1773,87 @@
     let activePickerDropdown = null;
     let activePicker = { tabId: null, pid: null, slotIdx: null };
 
+    function toggleBanPicker(pickerId, tabId, pid, event) {
+      event.stopPropagation();
+      if (activePickerDropdown && activePickerDropdown.dataset.picker === pickerId) {
+        closePicker();
+        return;
+      }
+      closePicker();
+
+      // Build available list for ban: all pokemon except already banned by others and already picked in this tab
+      const tabBans = getTabBans(tabId);
+      const tabPicks = getTabAllPicks(tabId);
+      const currentBan = state.bans[tabId]?.[pid] || null;
+
+      const available = state.allPokemon
+        .filter(name => {
+          if (name === currentBan) return true;
+          if (tabBans.has(name)) return false; // ya baneado por otro
+          return true;
+        })
+        .map(name => {
+          const alreadyPicked = !!(tabPicks[name]);
+          return { name, revived: false, gen: state.pokemonMap[name]?.gen || 0, genBlocked: false, banned: false, alreadyPicked };
+        });
+
+      activePicker = { tabId, pid, slotIdx: 'ban' };
+
+      const trigger = document.getElementById(pickerId);
+      const dropdown = document.createElement('div');
+      dropdown.className = 'pokepicker-dropdown open';
+      dropdown.dataset.picker = pickerId;
+      dropdown.dataset.isBan = '1';
+
+      dropdown.innerHTML = `
+    <div style="padding:6px 10px;font-size:10px;font-family:'Press Start 2P',monospace;color:#ef4444;border-bottom:1px solid var(--border);background:rgba(239,68,68,0.08)">🚫 BANEAR POKÉMON</div>
+    <input class="pokepicker-search" type="text" placeholder="Buscar pokémon..." autocomplete="off" spellcheck="false">
+    <div class="pokepicker-list" id="pklist_${pickerId}"></div>
+    ${currentBan ? `<button class="pokepicker-clear" onclick="setBan('${tabId}','${pid}',null)">✕ Quitar ban</button>` : ''}
+  `;
+
+      document.body.appendChild(dropdown);
+      activePickerDropdown = dropdown;
+      positionDropdown(dropdown, trigger);
+
+      renderBanPickerList(dropdown, available, currentBan, tabId, pid, '');
+
+      const searchInput = dropdown.querySelector('.pokepicker-search');
+      searchInput.focus();
+      searchInput.addEventListener('input', () => {
+        renderBanPickerList(dropdown, available, currentBan, tabId, pid, searchInput.value.toLowerCase().trim());
+      });
+      searchInput.addEventListener('keydown', e => {
+        if (e.key === 'Escape') { closePicker(); e.stopPropagation(); }
+      });
+    }
+
+    function renderBanPickerList(dropdown, available, selected, tabId, pid, query) {
+      const list = dropdown.querySelector('.pokepicker-list');
+      const filtered = query ? available.filter(p => p.name.includes(query)) : available;
+
+      if (filtered.length === 0) {
+        list.innerHTML = `<div class="pokepicker-empty">Sin resultados</div>`;
+        return;
+      }
+
+      // Already picked ones go at the bottom
+      const sorted = [...filtered].sort((a, b) => (a.alreadyPicked ? 1 : 0) - (b.alreadyPicked ? 1 : 0));
+
+      list.innerHTML = sorted.slice(0, 100).map(({ name: pk, alreadyPicked }) => {
+        const sprite = state.pokemonMap[pk]?.sprite || '';
+        return `<div class="pokepicker-item ${pk === selected ? 'selected' : ''}"
+      onclick="closePicker();setBan('${tabId}','${pid}','${pk}')">
+      ${sprite ? `<img src="${sprite}" alt="${pk}" onerror="this.style.display='none'">` : '<div style="width:28px"></div>'}
+      <span style="flex:1;text-transform:capitalize">${capitalize(pk)}</span>
+      ${alreadyPicked ? `<span style="font-size:10px;color:var(--text3);flex-shrink:0">ya pickeado</span>` : ''}
+    </div>`;
+      }).join('') + (filtered.length > 100 ? `<div class="pokepicker-empty">+${filtered.length - 100} más — filtra por nombre</div>` : '');
+    }
+
+
     function togglePicker(pickerId, tabId, pid, slotIdx, event) {
       event.stopPropagation();
-      // If same picker already open, close it
       if (activePickerDropdown && activePickerDropdown.dataset.picker === pickerId) {
         closePicker();
         return;
@@ -1743,10 +1939,12 @@
         const badges = [];
         if (revived) badges.push(`<span style="font-size:10px;font-weight:700;color:#f59e0b;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);padding:1px 6px;border-radius:20px;flex-shrink:0">💊 Revivido</span>`);
         if (genBlocked) badges.push(`<span style="font-size:10px;font-weight:700;color:#ef4444;background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.3);padding:1px 6px;border-radius:20px;flex-shrink:0" title="Ya tienes un pokémon de ${genName}">🚫 ${genName}</span>`);
+        if (banned) badges.push(`<span style="font-size:10px;font-weight:700;color:#ef4444;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.4);padding:1px 6px;border-radius:20px;flex-shrink:0">🚫 Baneado</span>`);
 
-        return `<div class="pokepicker-item ${pk === selected ? 'selected' : ''} ${genBlocked ? 'gen-blocked' : ''}"
-      onclick="${genBlocked ? `showGenBlockedMsg('${genName}')` : `selectPick('${tabId}','${pid}','${slotIdx}','${pk}')`}"
-      style="${genBlocked ? 'opacity:0.45;cursor:not-allowed;' : ''}">
+        const blocked = genBlocked || banned;
+        return `<div class="pokepicker-item ${pk === selected ? 'selected' : ''}"
+      onclick="${blocked ? `showGenBlockedMsg('${banned ? 'Este pokémon está baneado esta ronda' : `Ya tienes un pokémon de ${genName}`}')` : `selectPick('${tabId}','${pid}','${slotIdx}','${pk}')`}"
+      style="${blocked ? 'opacity:0.45;cursor:not-allowed;' : ''}">
       ${sprite ? `<img src="${sprite}" alt="${pk}" onerror="this.style.display='none'">` : '<div style="width:28px"></div>'}
       <span style="flex:1;text-transform:capitalize">${capitalize(pk)}</span>
       ${badges.join('')}
