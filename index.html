@@ -49,7 +49,6 @@
         repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255, 255, 255, 0.01) 40px, rgba(255, 255, 255, 0.01) 41px);
     }
 
-    /* HEADER */
     header {
       background: linear-gradient(135deg, #1a0540 0%, #0d0d1a 50%, #1a0d30 100%);
       border-bottom: 1px solid var(--border2);
@@ -95,10 +94,9 @@
     .header-actions {
       margin-left: auto;
       display: flex;
-      gap: 0.5rem;
+      gap: .5rem;
     }
 
-    /* BUTTONS */
     .btn {
       font-family: 'Outfit', sans-serif;
       font-size: 13px;
@@ -107,7 +105,7 @@
       border-radius: 8px;
       border: 1px solid transparent;
       cursor: pointer;
-      transition: all 0.15s;
+      transition: all .15s;
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -171,13 +169,11 @@
       justify-content: center;
     }
 
-    /* MAIN LAYOUT */
     .main {
       display: flex;
       height: calc(100vh - 81px);
     }
 
-    /* SIDEBAR */
     .sidebar {
       width: 300px;
       flex-shrink: 0;
@@ -198,41 +194,37 @@
       font-size: 11px;
       font-family: 'Press Start 2P', monospace;
       color: var(--accent3);
-      margin-bottom: 0.75rem;
+      margin-bottom: .75rem;
       text-shadow: 0 0 10px var(--glow);
     }
 
     .players-list {
       flex: 1;
       overflow-y: auto;
-      padding: 0.75rem;
+      padding: .75rem;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: .5rem;
     }
 
     .players-list::-webkit-scrollbar {
-      width: 4px;
-    }
-
-    .players-list::-webkit-scrollbar-track {
-      background: transparent;
+      width: 4px
     }
 
     .players-list::-webkit-scrollbar-thumb {
       background: var(--border2);
-      border-radius: 2px;
+      border-radius: 2px
     }
 
     .player-item {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 0.6rem 0.75rem;
+      padding: .6rem .75rem;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      transition: all 0.15s;
+      gap: .5rem;
+      transition: all .15s;
       cursor: grab;
     }
 
@@ -274,7 +266,7 @@
 
     .add-player-input {
       display: flex;
-      gap: 0.5rem;
+      gap: .5rem;
     }
 
     .text-input {
@@ -287,7 +279,7 @@
       font-family: 'Outfit', sans-serif;
       font-size: 14px;
       outline: none;
-      transition: border-color 0.15s;
+      transition: border-color .15s;
     }
 
     .text-input:focus {
@@ -299,7 +291,6 @@
       color: var(--text3);
     }
 
-    /* TABS */
     .content {
       flex: 1;
       display: flex;
@@ -312,33 +303,31 @@
       border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
-      gap: 0;
       overflow-x: auto;
-      padding: 0 0.5rem;
+      padding: 0 .5rem;
       flex-shrink: 0;
     }
 
     .tabs-bar::-webkit-scrollbar {
-      height: 2px;
+      height: 2px
     }
 
     .tabs-bar::-webkit-scrollbar-thumb {
-      background: var(--border2);
+      background: var(--border2)
     }
 
     .tab-btn {
       font-family: 'Outfit', sans-serif;
       font-size: 13px;
       font-weight: 600;
-      padding: 0.75rem 1.25rem;
+      padding: .75rem 1.25rem;
       border: none;
       background: transparent;
       color: var(--text2);
       cursor: pointer;
       border-bottom: 2px solid transparent;
       white-space: nowrap;
-      transition: all 0.15s;
-      position: relative;
+      transition: all .15s;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -364,15 +353,27 @@
       font-weight: 700;
     }
 
+    .tab-close {
+      font-size: 14px;
+      color: var(--text3);
+      margin-left: 4px;
+      transition: color .1s;
+      line-height: 1;
+    }
+
+    .tab-btn:hover .tab-close {
+      color: var(--red);
+    }
+
     .add-tab-btn {
       font-size: 18px;
-      padding: 0.5rem 0.75rem;
+      padding: .5rem .75rem;
       color: var(--text3);
       background: transparent;
       border: none;
       cursor: pointer;
       border-radius: 6px;
-      transition: all 0.15s;
+      transition: all .15s;
       line-height: 1;
       flex-shrink: 0;
       margin-left: 4px;
@@ -383,7 +384,6 @@
       background: rgba(124, 58, 237, 0.1);
     }
 
-    /* ARENA */
     .arena {
       flex: 1;
       overflow-y: auto;
@@ -391,26 +391,21 @@
     }
 
     .arena::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    .arena::-webkit-scrollbar-track {
-      background: transparent;
+      width: 6px
     }
 
     .arena::-webkit-scrollbar-thumb {
       background: var(--border2);
-      border-radius: 3px;
+      border-radius: 3px
     }
 
-    /* MATCHUP */
     .matchup {
       background: var(--bg2);
       border: 1px solid var(--border);
       border-radius: 16px;
       margin-bottom: 1.5rem;
       overflow: hidden;
-      transition: border-color 0.2s;
+      transition: border-color .2s;
     }
 
     .matchup:hover {
@@ -420,35 +415,24 @@
     .matchup-header {
       background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(168, 85, 247, 0.08));
       border-bottom: 1px solid var(--border);
-      padding: 0.6rem 1rem;
+      padding: .6rem 1rem;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: .5rem;
       font-family: 'Press Start 2P', monospace;
       font-size: 8px;
       color: var(--accent3);
     }
 
-    .vs-badge {
-      background: linear-gradient(135deg, #7c3aed, #a855f7);
-      color: white;
-      padding: 2px 8px;
-      border-radius: 20px;
-      font-size: 9px;
-      font-family: 'Press Start 2P', monospace;
-      box-shadow: 0 0 10px rgba(124, 58, 237, 0.4);
-    }
-
     .matchup-slots {
       display: grid;
       grid-template-columns: 1fr auto 1fr;
-      gap: 0;
     }
 
     .slot {
       padding: 1rem;
       min-height: 140px;
-      transition: background 0.15s;
+      transition: background .15s;
       position: relative;
     }
 
@@ -466,11 +450,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
+      gap: .5rem;
       color: var(--text3);
       font-size: 12px;
       cursor: pointer;
-      transition: all 0.15s;
+      transition: all .15s;
     }
 
     .slot-placeholder:hover {
@@ -481,14 +465,14 @@
 
     .slot-placeholder .ph-icon {
       font-size: 28px;
-      opacity: 0.5;
+      opacity: .5;
     }
 
     .vs-divider {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0 0.5rem;
+      padding: 0 .5rem;
       background: rgba(124, 58, 237, 0.05);
       border-left: 1px solid var(--border);
       border-right: 1px solid var(--border);
@@ -504,14 +488,13 @@
       transform: rotate(180deg);
     }
 
-    /* PLAYER CARD */
     .player-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 12px;
       overflow: hidden;
       cursor: grab;
-      transition: all 0.15s;
+      transition: all .15s;
       height: 100%;
     }
 
@@ -521,15 +504,15 @@
     }
 
     .player-card.dragging {
-      opacity: 0.3;
+      opacity: .3;
     }
 
     .card-header {
       background: linear-gradient(135deg, rgba(124, 58, 237, 0.3), rgba(168, 85, 247, 0.1));
-      padding: 0.75rem;
+      padding: .75rem;
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: .75rem;
       border-bottom: 1px solid var(--border);
     }
 
@@ -549,31 +532,14 @@
       text-transform: uppercase;
     }
 
-    .card-name {
-      font-weight: 700;
-      font-size: 15px;
-      color: var(--text);
-      flex: 1;
-    }
-
-    .card-round-badge {
-      font-size: 10px;
-      background: rgba(124, 58, 237, 0.3);
-      border: 1px solid rgba(168, 85, 247, 0.4);
-      color: var(--accent3);
-      padding: 2px 8px;
-      border-radius: 20px;
-    }
-
     .card-body {
-      padding: 0.75rem;
+      padding: .75rem;
     }
 
-    /* POKEMON PICKS */
     .picks-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 0.5rem;
+      gap: .5rem;
     }
 
     .pick-slot {
@@ -581,30 +547,28 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       overflow: hidden;
-      transition: all 0.15s;
+      transition: all .15s;
       position: relative;
-    }
-
-    .pick-slot:has(.pick-select:focus) {
-      border-color: var(--accent2);
-      box-shadow: 0 0 8px var(--glow2);
     }
 
     .pick-pokemon-img {
       display: block;
       width: 48px;
       height: 48px;
-      margin: 0.25rem auto 0;
+      margin: .25rem auto 0;
       image-rendering: pixelated;
     }
 
-    .pick-select {
-      display: none;
+    .pick-num {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      font-size: 9px;
+      font-family: 'Press Start 2P', monospace;
+      color: var(--accent3);
+      opacity: .7;
     }
 
-    /* hidden, replaced by pokepicker */
-
-    /* POKEPICKER custom dropdown */
     .pokepicker {
       position: relative;
       width: 100%;
@@ -625,7 +589,7 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      transition: background 0.1s;
+      transition: background .1s;
       display: block;
     }
 
@@ -647,7 +611,7 @@
       border-radius: 10px;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px var(--glow2);
       z-index: 9000;
-      width: 200px;
+      width: 220px;
       overflow: hidden;
     }
 
@@ -678,12 +642,12 @@
     }
 
     .pokepicker-list::-webkit-scrollbar {
-      width: 4px;
+      width: 4px
     }
 
     .pokepicker-list::-webkit-scrollbar-thumb {
       background: var(--border2);
-      border-radius: 2px;
+      border-radius: 2px
     }
 
     .pokepicker-item {
@@ -694,12 +658,11 @@
       cursor: pointer;
       font-size: 13px;
       text-transform: capitalize;
-      transition: background 0.1s;
+      transition: background .1s;
       color: var(--text);
     }
 
-    .pokepicker-item:hover,
-    .pokepicker-item.focused {
+    .pokepicker-item:hover {
       background: rgba(124, 58, 237, 0.15);
       color: var(--accent3);
     }
@@ -729,7 +692,7 @@
       font-size: 12px;
       cursor: pointer;
       text-align: center;
-      transition: background 0.1s;
+      transition: background .1s;
     }
 
     .pokepicker-clear:hover {
@@ -743,186 +706,312 @@
       font-size: 12px;
     }
 
-    .pick-num {
-      position: absolute;
-      top: 4px;
-      left: 4px;
-      font-size: 9px;
-      font-family: 'Press Start 2P', monospace;
-      color: var(--accent3);
-      opacity: 0.7;
+    /* STANDINGS TAB */
+    .tab-btn.standings-tab {
+      border-left: 1px solid var(--border);
+      margin-left: 4px;
     }
 
-    /* UNASSIGNED PLAYERS */
-    .unassigned-section {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
+    .tab-btn.standings-tab.active {
+      color: #fbbf24;
+      border-bottom-color: #f59e0b;
+      background: rgba(245, 158, 11, 0.08);
     }
 
-    .unassigned-header {
-      font-size: 10px;
-      font-family: 'Press Start 2P', monospace;
-      color: var(--text3);
-      margin-bottom: 0.75rem;
+    .standings-arena {
+      padding: 1.5rem;
     }
 
-    .unassigned-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .unassigned-player {
-      background: var(--surface);
-      border: 1px dashed var(--border2);
-      border-radius: 10px;
-      padding: 0.5rem 0.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      cursor: grab;
-      transition: all 0.15s;
-    }
-
-    .unassigned-player:hover {
-      border-color: var(--accent2);
-      background: var(--surface2);
-    }
-
-    /* ADD MATCHUP */
-    .add-matchup-btn {
+    .standings-table {
       width: 100%;
-      padding: 1rem;
+      border-collapse: collapse;
       background: var(--bg2);
-      border: 2px dashed var(--border2);
       border-radius: 16px;
-      color: var(--text3);
-      font-family: 'Outfit', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
+      overflow: hidden;
+      border: 1px solid var(--border);
     }
 
-    .add-matchup-btn:hover {
-      border-color: var(--accent2);
-      color: var(--accent3);
-      background: rgba(124, 58, 237, 0.05);
-      box-shadow: 0 0 20px var(--glow2);
-    }
-
-    /* MODAL */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.7);
-      z-index: 1000;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(4px);
-    }
-
-    .modal-overlay.open {
-      display: flex;
-    }
-
-    .modal {
-      background: var(--bg2);
-      border: 1px solid var(--border2);
-      border-radius: 20px;
-      padding: 2rem;
-      max-width: 420px;
-      width: 90%;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px var(--glow2);
-    }
-
-    .modal h2 {
+    .standings-table th {
+      padding: 0.75rem 1rem;
+      text-align: left;
       font-family: 'Press Start 2P', monospace;
-      font-size: 12px;
-      color: var(--gold2);
-      margin-bottom: 1.5rem;
-      text-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+      font-size: 8px;
+      color: var(--accent3);
+      background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(168, 85, 247, 0.08));
+      border-bottom: 1px solid var(--border2);
     }
 
-    .modal-actions {
-      display: flex;
-      gap: 0.75rem;
-      justify-content: flex-end;
-      margin-top: 1.5rem;
+    .standings-table th.right,
+    .standings-table td.right {
+      text-align: right;
     }
 
-    /* LOADING */
-    .loading-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
-      z-index: 9999;
-      transition: width 0.3s;
-      box-shadow: 0 0 10px var(--glow);
+    .standings-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--text);
     }
 
-    /* SCROLLABLE INNER */
-    .slot-inner {
-      height: 100%;
+    .standings-table tr:last-child td {
+      border-bottom: none;
     }
 
-    /* EMPTY STATE */
-    .empty-state {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 4rem 2rem;
-      gap: 1rem;
-      color: var(--text3);
+    .standings-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .rank-num {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 11px;
+      width: 32px;
       text-align: center;
     }
 
-    .empty-icon {
-      font-size: 64px;
-      opacity: 0.3;
+    .rank-1 {
+      color: #fbbf24;
+      text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
     }
 
-    .empty-state h3 {
+    .rank-2 {
+      color: #94a3b8;
+    }
+
+    .rank-3 {
+      color: #cd7c3a;
+    }
+
+    .pts-badge {
       font-family: 'Press Start 2P', monospace;
       font-size: 11px;
-      color: var(--text2);
+      color: var(--accent3);
+      background: rgba(124, 58, 237, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      padding: 3px 10px;
+      border-radius: 20px;
     }
 
-    .empty-state p {
-      font-size: 14px;
+    .wins-badge {
+      font-size: 12px;
+      color: #86efac;
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.25);
+      padding: 2px 8px;
+      border-radius: 20px;
     }
 
-    /* TAB DELETE */
-    .tab-close {
-      font-size: 14px;
+    .standings-empty {
+      text-align: center;
+      padding: 3rem;
       color: var(--text3);
-      margin-left: 4px;
-      transition: color 0.1s;
+      font-size: 13px;
+    }
+
+    .banner-winner {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(251, 191, 36, 0.05));
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .banner-trophy {
+      font-size: 48px;
       line-height: 1;
     }
 
-    .tab-btn:hover .tab-close {
-      color: var(--red);
+    .banner-text h2 {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 11px;
+      color: #fbbf24;
+      margin-bottom: 6px;
     }
 
-    /* BAN SECTION */
-    .ban-section {
+    .banner-text p {
+      font-size: 14px;
+      color: var(--text2);
+    }
+
+    .winner-section {
       border-top: 1px solid var(--border);
-      padding: 0.6rem 0.75rem;
+      padding: .6rem .75rem;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: .75rem;
+      flex-wrap: wrap;
+      background: rgba(34, 197, 94, 0.03);
+    }
+
+    .survivors-field {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+
+    .survivors-label {
+      font-size: 9px;
+      font-family: 'Press Start 2P', monospace;
+      color: #60a5fa;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .survivors-counter {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .surv-btn {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      border: 1px solid var(--border2);
+      background: var(--surface);
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .1s;
+      padding: 0;
+    }
+
+    .surv-btn:hover:not(:disabled) {
+      background: var(--surface2);
+      border-color: var(--accent2);
+    }
+
+    .surv-btn:disabled {
+      opacity: .3;
+      cursor: not-allowed;
+    }
+
+    .surv-num {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 13px;
+      color: #60a5fa;
+      min-width: 20px;
+      text-align: center;
+    }
+
+    .winner-toggle {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .winner-toggle input[type=checkbox] {
+      display: none;
+    }
+
+    .winner-chip {
+      font-size: 10px;
+      font-family: 'Press Start 2P', monospace;
+      padding: 4px 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(100, 116, 139, 0.4);
+      color: var(--text3);
+      background: rgba(100, 116, 139, 0.08);
+      transition: all .15s;
+      white-space: nowrap;
+    }
+
+    .winner-toggle input:checked+.winner-chip {
+      background: rgba(34, 197, 94, 0.15);
+      border-color: rgba(34, 197, 94, 0.5);
+      color: #86efac;
+      box-shadow: 0 0 10px rgba(34, 197, 94, 0.2);
+    }
+
+    .revival-picker {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      flex: 1;
+    }
+
+    .revival-label {
+      font-size: 9px;
+      font-family: 'Press Start 2P', monospace;
+      color: #f59e0b;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .revival-slot {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px dashed rgba(245, 158, 11, 0.35);
+      border-radius: 8px;
+      padding: 4px 8px;
+      min-height: 34px;
+      cursor: pointer;
+      transition: all .15s;
+      min-width: 0;
+    }
+
+    .revival-slot:hover {
+      border-color: rgba(245, 158, 11, 0.6);
+      background: rgba(245, 158, 11, 0.14);
+    }
+
+    .revival-slot.has-revival {
+      border-style: solid;
+      border-color: rgba(245, 158, 11, 0.5);
+    }
+
+    .revival-pokemon-img {
+      width: 28px;
+      height: 28px;
+      image-rendering: pixelated;
+      flex-shrink: 0;
+    }
+
+    .revival-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fcd34d;
+      text-transform: capitalize;
+    }
+
+    .revival-placeholder {
+      font-size: 11px;
+      color: rgba(245, 158, 11, 0.45);
+    }
+
+    .revival-clear {
+      background: none;
+      border: none;
+      color: rgba(245, 158, 11, 0.5);
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 1;
+      padding: 2px;
+      transition: color .1s;
+      flex-shrink: 0;
+    }
+
+    .revival-clear:hover {
+      color: #f59e0b;
+    }
+
+    .ban-section {
+      border-top: 1px solid var(--border);
+      padding: .6rem .75rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
       background: rgba(239, 68, 68, 0.04);
     }
 
@@ -930,7 +1019,7 @@
       font-size: 9px;
       font-family: 'Press Start 2P', monospace;
       color: #ef4444;
-      opacity: 0.8;
+      opacity: .8;
       flex-shrink: 0;
       white-space: nowrap;
     }
@@ -939,14 +1028,14 @@
       flex: 1;
       display: flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: .4rem;
       background: rgba(239, 68, 68, 0.08);
       border: 1px dashed rgba(239, 68, 68, 0.35);
       border-radius: 8px;
       padding: 4px 8px;
       min-height: 36px;
       cursor: pointer;
-      transition: all 0.15s;
+      transition: all .15s;
     }
 
     .ban-slot:hover {
@@ -988,7 +1077,7 @@
       font-size: 16px;
       line-height: 1;
       padding: 2px;
-      transition: color 0.1s;
+      transition: color .1s;
       flex-shrink: 0;
     }
 
@@ -996,42 +1085,145 @@
       color: #ef4444;
     }
 
-    .tooltip {
-      position: relative;
+    .unassigned-section {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
     }
 
-    .tooltip::after {
-      content: attr(data-tip);
-      position: absolute;
-      bottom: 120%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--bg3);
+    .unassigned-header {
+      font-size: 10px;
+      font-family: 'Press Start 2P', monospace;
+      color: var(--text3);
+      margin-bottom: .75rem;
+    }
+
+    .unassigned-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+    }
+
+    .unassigned-player {
+      background: var(--surface);
+      border: 1px dashed var(--border2);
+      border-radius: 10px;
+      padding: .5rem .75rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      cursor: grab;
+      transition: all .15s;
+    }
+
+    .unassigned-player:hover {
+      border-color: var(--accent2);
+      background: var(--surface2);
+    }
+
+    .add-matchup-btn {
+      width: 100%;
+      padding: 1rem;
+      background: var(--bg2);
+      border: 2px dashed var(--border2);
+      border-radius: 16px;
+      color: var(--text3);
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+    }
+
+    .add-matchup-btn:hover {
+      border-color: var(--accent2);
+      color: var(--accent3);
+      background: rgba(124, 58, 237, 0.05);
+      box-shadow: 0 0 20px var(--glow2);
+    }
+
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(4px);
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal {
+      background: var(--bg2);
       border: 1px solid var(--border2);
-      color: var(--text);
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 420px;
+      width: 90%;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px var(--glow2);
+    }
+
+    .modal h2 {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 12px;
+      color: var(--gold2);
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: .75rem;
+      justify-content: flex-end;
+      margin-top: 1.5rem;
+    }
+
+    .loading-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
+      z-index: 9999;
+      transition: width .3s;
+      box-shadow: 0 0 10px var(--glow);
+    }
+
+    .empty-state {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      gap: 1rem;
+      color: var(--text3);
+      text-align: center;
+    }
+
+    .empty-icon {
+      font-size: 64px;
+      opacity: .3;
+    }
+
+    .empty-state h3 {
+      font-family: 'Press Start 2P', monospace;
       font-size: 11px;
-      padding: 4px 8px;
-      border-radius: 6px;
-      white-space: nowrap;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.15s;
-      z-index: 999;
+      color: var(--text2);
     }
 
-    .tooltip:hover::after {
-      opacity: 1;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .sidebar {
-        width: 220px;
-      }
-
-      header h1 {
-        font-size: 10px;
-      }
+    .empty-state p {
+      font-size: 14px;
     }
 
     .remove-player-btn {
@@ -1042,38 +1234,43 @@
       font-size: 16px;
       line-height: 1;
       padding: 2px;
-      transition: color 0.1s;
+      transition: color .1s;
     }
 
     .remove-player-btn:hover {
       color: var(--red);
     }
 
-    .matchup-footer {
-      border-top: 1px solid var(--border);
-      padding: 0.5rem 1rem;
-      display: flex;
-      justify-content: flex-end;
-      gap: 0.5rem;
+    .badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 20px;
+      flex-shrink: 0;
     }
 
-    .winner-badge {
-      font-size: 10px;
-      font-family: 'Press Start 2P', monospace;
-      color: var(--gold2);
+    .badge-gold {
+      color: #f59e0b;
       background: rgba(245, 158, 11, 0.15);
       border: 1px solid rgba(245, 158, 11, 0.3);
-      padding: 4px 10px;
-      border-radius: 20px;
-      box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+    }
+
+    .badge-red {
+      color: #ef4444;
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .badge-banned {
+      color: #ef4444;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
     }
   </style>
 </head>
 
 <body>
-
   <div class="loading-bar" id="loadingBar" style="width:0%"></div>
-
   <header>
     <div class="header-logo">⚔️</div>
     <div>
@@ -1087,30 +1284,23 @@
       <button class="btn btn-gold btn-sm" onclick="openAddTabModal()">+ Nueva Ronda</button>
     </div>
   </header>
-
   <div class="main">
-    <!-- SIDEBAR -->
     <aside class="sidebar">
       <div class="sidebar-header">
         <h2>👥 Jugadores</h2>
         <div class="add-player-input">
           <input type="text" class="text-input" id="newPlayerName" placeholder="Nombre jugador..." maxlength="20"
             onkeydown="if(event.key==='Enter')addPlayer()">
-          <button class="btn btn-primary btn-icon" onclick="addPlayer()" title="Añadir jugador">+</button>
+          <button class="btn btn-primary btn-icon" onclick="addPlayer()">+</button>
         </div>
       </div>
       <div class="players-list" id="playersList"></div>
     </aside>
-
-    <!-- CONTENT -->
     <div class="content">
-      <!-- TABS -->
       <div class="tabs-bar" id="tabsBar">
-        <button class="add-tab-btn" onclick="openAddTabModal()" title="Nueva ronda">＋</button>
+        <button class="add-tab-btn" onclick="openAddTabModal()">＋</button>
       </div>
-
-      <!-- ARENA -->
-      <div class="empty-state" id="emptyState" style="flex:1;display:flex;">
+      <div class="empty-state" id="emptyState">
         <div class="empty-icon">🏆</div>
         <h3>Sin rondas</h3>
         <p>Añade jugadores y crea la primera ronda para empezar el draft</p>
@@ -1119,17 +1309,12 @@
       <div class="arena" id="arena" style="display:none;"></div>
     </div>
   </div>
-
-  <!-- MODAL ADD TAB -->
   <div class="modal-overlay" id="addTabModal">
     <div class="modal">
       <h2>🏆 NUEVA RONDA</h2>
-      <div style="display:flex;flex-direction:column;gap:1rem;">
-        <div>
-          <label style="font-size:12px;color:var(--text2);margin-bottom:6px;display:block;">Nombre de la ronda</label>
-          <input type="text" class="text-input" id="tabNameInput" placeholder="Ej: Ronda 1, Semifinal..."
-            style="width:100%" onkeydown="if(event.key==='Enter')confirmAddTab()">
-        </div>
+      <div><label style="font-size:12px;color:var(--text2);margin-bottom:6px;display:block;">Nombre de la ronda</label>
+        <input type="text" class="text-input" id="tabNameInput" placeholder="Ej: Ronda 1, Semifinal..."
+          style="width:100%" onkeydown="if(event.key==='Enter')confirmAddTab()">
       </div>
       <div class="modal-actions">
         <button class="btn btn-secondary" onclick="closeModal('addTabModal')">Cancelar</button>
@@ -1137,858 +1322,831 @@
       </div>
     </div>
   </div>
-
   <script>
-    // ─── STATE ───────────────────────────────────────────────────────────────────
-    let state = {
-      players: [],    // [{id, name}]
-      tabs: [],       // [{id, name, matchups: [{id, slots:[playerId|null, playerId|null]}], playerNames:{id:name}}]
-      activeTab: null,
-      allPokemon: [],
-      pokemonMap: {},  // name -> {name, sprite}
-      picks: {},       // picks[tabId][playerId] = [pokemonName x6]
-      bans: {}         // bans[tabId][playerId] = pokemonName|null
+    // ── STATE ──────────────────────────────────────────────────────────────────────
+    var state = {
+      players: [], tabs: [], activeTab: null,
+      allPokemon: [], pokemonMap: {},
+      picks: {}, bans: {},
+      winners: {},    // winners[tabId][pid] = true|false
+      revivals: {},   // revivals[tabId][pid] = pokemonName|null
+      survivors: {}   // survivors[tabId][pid] = number (0-6)
     };
+    var dragData = null, nextId = 1;
+    function genId() { return 'id_' + (nextId++); }
 
-    let dragData = null;
-    let nextId = 1;
-    const genId = () => 'id_' + (nextId++);
-
-    // ─── GENERACIONES por rango de ID nacional ───────────────────────────────────
-    const GEN_RANGES = [
-      { gen: 1, min: 1, max: 151 },
-      { gen: 2, min: 152, max: 251 },
-      { gen: 3, min: 252, max: 386 },
-      { gen: 4, min: 387, max: 493 },
-      { gen: 5, min: 494, max: 649 },
-      { gen: 6, min: 650, max: 721 },
-      { gen: 7, min: 722, max: 809 },
-      { gen: 8, min: 810, max: 905 },
-      { gen: 9, min: 906, max: 1025 },
+    // ── GENERACIONES ───────────────────────────────────────────────────────────────
+    var GEN_RANGES = [
+      { gen: 1, min: 1, max: 151 }, { gen: 2, min: 152, max: 251 }, { gen: 3, min: 252, max: 386 },
+      { gen: 4, min: 387, max: 493 }, { gen: 5, min: 494, max: 649 }, { gen: 6, min: 650, max: 721 },
+      { gen: 7, min: 722, max: 809 }, { gen: 8, min: 810, max: 905 }, { gen: 9, min: 906, max: 1025 }
     ];
-    const GEN_NAMES = ['', 'Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Teselia', 'Kalos', 'Alola', 'Galar', 'Paldea'];
-
-    function getPokemonGen(pokemonId) {
-      const id = parseInt(pokemonId);
-      for (const r of GEN_RANGES) {
-        if (id >= r.min && id <= r.max) return r.gen;
+    var GEN_NAMES = ['', 'Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Teselia', 'Kalos', 'Alola', 'Galar', 'Paldea'];
+    function getPokemonGen(id) {
+      id = parseInt(id);
+      for (var i = 0; i < GEN_RANGES.length; i++) {
+        if (id >= GEN_RANGES[i].min && id <= GEN_RANGES[i].max) return GEN_RANGES[i].gen;
       }
-      return 0; // formas especiales / fuera de rango
+      return 0;
     }
 
-    // ─── POKEMON API ─────────────────────────────────────────────────────────────
+    // ── POKEAPI ────────────────────────────────────────────────────────────────────
     async function loadPokemon() {
       setLoading(10);
       try {
-        const r = await fetch('https://pokeapi.co/api/v2/pokemon?limit=1025&offset=0');
-        const d = await r.json();
+        var r = await fetch('https://pokeapi.co/api/v2/pokemon?limit=1025&offset=0');
+        var d = await r.json();
         setLoading(60);
-        state.allPokemon = d.results.map(p => p.name).sort();
-        d.results.forEach(p => {
-          const id = parseInt(p.url.split('/').filter(Boolean).pop());
+        state.allPokemon = d.results.map(function (p) { return p.name; }).sort();
+        d.results.forEach(function (p) {
+          var id = parseInt(p.url.split('/').filter(Boolean).pop());
           state.pokemonMap[p.name] = {
-            name: p.name,
-            sprite: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`,
-            id,
-            gen: getPokemonGen(id)
+            name: p.name, id: id, gen: getPokemonGen(id),
+            sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + id + '.png'
           };
         });
         setLoading(100);
-        setTimeout(() => setLoading(0), 500);
+        setTimeout(function () { setLoading(0); }, 500);
         renderArena();
-      } catch (e) {
-        console.error(e);
-        setLoading(0);
-      }
+      } catch (e) { console.error(e); setLoading(0); }
     }
-
     function setLoading(pct) {
-      const bar = document.getElementById('loadingBar');
+      var bar = document.getElementById('loadingBar');
       bar.style.width = pct + '%';
-      if (pct === 0) bar.style.opacity = '0';
-      else bar.style.opacity = '1';
+      bar.style.opacity = pct === 0 ? '0' : '1';
     }
 
-    // ─── PLAYERS ─────────────────────────────────────────────────────────────────
+    // ── PLAYERS ────────────────────────────────────────────────────────────────────
     function addPlayer() {
-      const input = document.getElementById('newPlayerName');
-      const name = input.value.trim();
+      var input = document.getElementById('newPlayerName');
+      var name = input.value.trim();
       if (!name) return;
-      const player = { id: genId(), name };
+      var player = { id: genId(), name: name };
       state.players.push(player);
-      // Add to all tabs
-      state.tabs.forEach(tab => {
+      state.tabs.forEach(function (tab) {
         tab.playerNames[player.id] = name;
         if (!state.picks[tab.id]) state.picks[tab.id] = {};
-        state.picks[tab.id][player.id] = [null, null, null, null, null, null];
         if (!state.bans[tab.id]) state.bans[tab.id] = {};
+        if (!state.winners[tab.id]) state.winners[tab.id] = {};
+        if (!state.revivals[tab.id]) state.revivals[tab.id] = {};
+        if (!state.survivors[tab.id]) state.survivors[tab.id] = {};
+        state.picks[tab.id][player.id] = [null, null, null, null, null, null];
         state.bans[tab.id][player.id] = null;
+        state.winners[tab.id][player.id] = false;
+        state.revivals[tab.id][player.id] = null;
+        state.survivors[tab.id][player.id] = 0;
       });
       input.value = '';
-      renderSidebar();
-      renderArena();
+      renderSidebar(); renderArena();
     }
-
     function removePlayer(pid) {
-      state.players = state.players.filter(p => p.id !== pid);
-      // Remove from matchup slots
-      state.tabs.forEach(tab => {
-        tab.matchups.forEach(m => {
-          m.slots = m.slots.map(s => s === pid ? null : s);
+      state.players = state.players.filter(function (p) { return p.id !== pid; });
+      state.tabs.forEach(function (tab) {
+        tab.matchups.forEach(function (m) {
+          m.slots = m.slots.map(function (s) { return s === pid ? null : s; });
         });
         delete tab.playerNames[pid];
         if (state.picks[tab.id]) delete state.picks[tab.id][pid];
+        if (state.bans[tab.id]) delete state.bans[tab.id][pid];
       });
-      renderSidebar();
-      renderArena();
+      renderSidebar(); renderArena();
     }
-
     function updatePlayerName(pid, name) {
-      const p = state.players.find(x => x.id === pid);
+      var p = state.players.find(function (x) { return x.id === pid; });
       if (p) p.name = name;
-      state.tabs.forEach(tab => {
-        tab.playerNames[pid] = name;
-      });
-      // Update avatar letters etc without full re-render
-      document.querySelectorAll(`[data-player-avatar="${pid}"]`).forEach(el => {
-        el.textContent = name.charAt(0).toUpperCase() || '?';
-      });
-      document.querySelectorAll(`[data-player-name-display="${pid}"]`).forEach(el => {
-        el.textContent = name || 'Jugador';
-      });
+      state.tabs.forEach(function (tab) { tab.playerNames[pid] = name; });
     }
-
-    // Per-tab player name override
     function updateTabPlayerName(tabId, pid, name) {
-      const tab = state.tabs.find(t => t.id === tabId);
+      var tab = state.tabs.find(function (t) { return t.id === tabId; });
       if (tab) tab.playerNames[pid] = name;
     }
-
     function getPlayerName(tabId, pid) {
-      const tab = state.tabs.find(t => t.id === tabId);
+      var tab = state.tabs.find(function (t) { return t.id === tabId; });
       if (tab && tab.playerNames[pid] !== undefined) return tab.playerNames[pid];
-      const p = state.players.find(x => x.id === pid);
+      var p = state.players.find(function (x) { return x.id === pid; });
       return p ? p.name : 'Jugador';
     }
 
-    // ─── TABS ─────────────────────────────────────────────────────────────────────
+    // ── TABS ───────────────────────────────────────────────────────────────────────
     function openAddTabModal() {
-      const num = state.tabs.length + 1;
-      document.getElementById('tabNameInput').value = `Ronda ${num}`;
+      document.getElementById('tabNameInput').value = 'Ronda ' + (state.tabs.length + 1);
       openModal('addTabModal');
-      setTimeout(() => document.getElementById('tabNameInput').select(), 50);
+      setTimeout(function () { document.getElementById('tabNameInput').select(); }, 50);
     }
-
     function confirmAddTab() {
-      const name = document.getElementById('tabNameInput').value.trim() || `Ronda ${state.tabs.length + 1}`;
-      addTab(name);
-      closeModal('addTabModal');
+      var name = document.getElementById('tabNameInput').value.trim() || ('Ronda ' + (state.tabs.length + 1));
+      addTab(name); closeModal('addTabModal');
     }
-
     function addTab(name) {
-      const tabId = genId();
-      const prevTab = state.tabs.length > 0 ? state.tabs[state.tabs.length - 1] : null;
-
-      // Copy player names from previous tab (or base)
-      const playerNames = {};
-      state.players.forEach(p => {
+      var tabId = genId();
+      var prevTab = state.tabs.length > 0 ? state.tabs[state.tabs.length - 1] : null;
+      var playerNames = {};
+      state.players.forEach(function (p) {
         playerNames[p.id] = prevTab ? (prevTab.playerNames[p.id] || p.name) : p.name;
       });
-
-      const tab = { id: tabId, name, matchups: [], playerNames };
-
-      // Initialize picks and bans for this tab
-      if (!state.picks[tabId]) state.picks[tabId] = {};
-      if (!state.bans[tabId]) state.bans[tabId] = {};
-      state.players.forEach(p => {
+      var tab = { id: tabId, name: name, matchups: [], playerNames: playerNames };
+      state.picks[tabId] = {};
+      state.bans[tabId] = {};
+      state.winners[tabId] = {};
+      state.revivals[tabId] = {};
+      state.survivors[tabId] = {};
+      state.players.forEach(function (p) {
         state.picks[tabId][p.id] = [null, null, null, null, null, null];
         state.bans[tabId][p.id] = null;
+        state.winners[tabId][p.id] = false;
+        state.revivals[tabId][p.id] = null;
+        state.survivors[tabId][p.id] = 0;
       });
-
       state.tabs.push(tab);
       state.activeTab = tabId;
-      hideEmptyState();
-      renderTabs();
-      renderArena();
+      hideEmptyState(); renderTabs(); renderArena();
     }
-
     function removeTab(tabId) {
-      if (state.tabs.length === 1) {
-        if (!confirm('¿Eliminar la única ronda?')) return;
-      }
-      state.tabs = state.tabs.filter(t => t.id !== tabId);
-      delete state.picks[tabId];
-      delete state.bans[tabId];
-      if (state.activeTab === tabId) {
+      if (state.tabs.length === 1) { if (!confirm('¿Eliminar la única ronda?')) return; }
+      state.tabs = state.tabs.filter(function (t) { return t.id !== tabId; });
+      delete state.picks[tabId]; delete state.bans[tabId];
+      delete state.winners[tabId]; delete state.revivals[tabId]; delete state.survivors[tabId];
+      if (state.activeTab === tabId)
         state.activeTab = state.tabs.length > 0 ? state.tabs[state.tabs.length - 1].id : null;
-      }
       if (state.tabs.length === 0) showEmptyState();
-      renderTabs();
-      renderArena();
+      renderTabs(); renderArena();
     }
-
     function switchTab(tabId) {
       state.activeTab = tabId;
       renderTabs();
-      renderArena();
+      if (tabId === '__standings__') renderStandings();
+      else renderArena();
     }
 
-    // ─── MATCHUPS ─────────────────────────────────────────────────────────────────
+    // ── MATCHUPS ───────────────────────────────────────────────────────────────────
     function addMatchup(tabId) {
-      const tab = state.tabs.find(t => t.id === tabId);
+      var tab = state.tabs.find(function (t) { return t.id === tabId; });
       if (!tab) return;
       tab.matchups.push({ id: genId(), slots: [null, null] });
       renderArena();
     }
-
     function removeMatchup(tabId, matchupId) {
-      const tab = state.tabs.find(t => t.id === tabId);
+      var tab = state.tabs.find(function (t) { return t.id === tabId; });
       if (!tab) return;
-      tab.matchups = tab.matchups.filter(m => m.id !== matchupId);
+      tab.matchups = tab.matchups.filter(function (m) { return m.id !== matchupId; });
       renderArena();
     }
-
-    // ─── PICKS ───────────────────────────────────────────────────────────────────
-    // Get all pokemon picked by a player across ALL previous tabs
-    function getPlayerPastPicks(tabId, pid) {
-      const picks = new Set();
-      const tabIdx = state.tabs.findIndex(t => t.id === tabId);
-      for (let i = 0; i < tabIdx; i++) {
-        const tId = state.tabs[i].id;
-        if (state.picks[tId] && state.picks[tId][pid]) {
-          state.picks[tId][pid].forEach(pk => { if (pk) picks.add(pk); });
-        }
-      }
-      return picks;
-    }
-
-    // Get all pokemon picked by ALL players in THIS tab (for global exclusion in same round)
-    function getTabAllPicks(tabId) {
-      const picks = {};
-      if (!state.picks[tabId]) return picks;
-      Object.entries(state.picks[tabId]).forEach(([pid, arr]) => {
-        arr.forEach((pk, i) => {
-          if (pk) picks[pk] = pid;
-        });
-      });
-      return picks;
-    }
-
-    // Get all banned pokemon in a tab as a Set
-    function getTabBans(tabId) {
-      const banned = new Set();
-      if (!state.bans[tabId]) return banned;
-      Object.values(state.bans[tabId]).forEach(pk => { if (pk) banned.add(pk); });
-      return banned;
-    }
-
-    function setBan(tabId, pid, pokemon) {
-      if (!state.bans[tabId]) state.bans[tabId] = {};
-      state.bans[tabId][pid] = pokemon || null;
-      renderArena();
-    }
-
-
-    function setPick(tabId, pid, slot, pokemon) {
-      if (!state.picks[tabId]) state.picks[tabId] = {};
-      if (!state.picks[tabId][pid]) state.picks[tabId][pid] = [null, null, null, null, null, null];
-      state.picks[tabId][pid][slot] = pokemon || null;
-      // Re-render picks for this tab (other players' selects need updating)
-      renderArena();
-    }
-
-    // ─── AVAILABLE POKEMON for a player in a slot ───────────────────────────────
-    // Returns [{name, revived, genBlocked, gen, banned}]
-    function getAvailablePokemon(tabId, pid, slotIdx) {
-      const pastPicks = getPlayerPastPicks(tabId, pid);
-      const tabPicks = getTabAllPicks(tabId);
-      const tabBans = getTabBans(tabId);
-      const myCurrentPicks = (state.picks[tabId] && state.picks[tabId][pid]) ? state.picks[tabId][pid] : [];
-      const currentSelected = myCurrentPicks[slotIdx];
-
-      // Gens ya usadas en OTROS slots de esta ronda
-      const usedGens = new Set();
-      myCurrentPicks.forEach((pk, i) => {
-        if (i !== slotIdx && pk && state.pokemonMap[pk]?.gen) {
-          usedGens.add(state.pokemonMap[pk].gen);
-        }
-      });
-
-      return state.allPokemon
-        .filter(name => {
-          if (name === currentSelected) return true;
-          if (tabPicks[name] && tabPicks[name] !== pid) return false;
-          for (let i = 0; i < myCurrentPicks.length; i++) {
-            if (i !== slotIdx && myCurrentPicks[i] === name) return false;
-          }
-          return true;
-        })
-        .map(name => {
-          const pkmn = state.pokemonMap[name];
-          const gen = pkmn?.gen || 0;
-          const genBlocked = gen > 0 && usedGens.has(gen) && name !== currentSelected;
-          const banned = tabBans.has(name) && name !== currentSelected;
-          return { name, revived: pastPicks.has(name), gen, genBlocked, banned };
-        });
-    }
-
-    // ─── RENDER ──────────────────────────────────────────────────────────────────
-    function renderSidebar() {
-      const list = document.getElementById('playersList');
-      if (state.players.length === 0) {
-        list.innerHTML = `<div style="text-align:center;padding:2rem;color:var(--text3);font-size:13px;">Añade jugadores para empezar</div>`;
-        return;
-      }
-      list.innerHTML = state.players.map(p => `
-    <div class="player-item" draggable="true"
-      ondragstart="onDragStart(event,'player','${p.id}')"
-      ondragend="onDragEnd(event)">
-      <div class="player-avatar" data-player-avatar="${p.id}">${p.name.charAt(0).toUpperCase() || '?'}</div>
-      <input class="player-name-input" value="${escHtml(p.name)}"
-        onchange="updatePlayerName('${p.id}',this.value)"
-        oninput="updatePlayerName('${p.id}',this.value)"
-        placeholder="Nombre..."
-        draggable="false" onclick="event.stopPropagation()">
-      <button class="remove-player-btn" onclick="removePlayer('${p.id}')" title="Eliminar jugador">×</button>
-    </div>
-  `).join('');
-    }
-
-    function renderTabs() {
-      const bar = document.getElementById('tabsBar');
-      bar.innerHTML = state.tabs.map(tab => `
-    <button class="tab-btn ${tab.id === state.activeTab ? 'active' : ''}"
-      onclick="switchTab('${tab.id}')">
-      ${escHtml(tab.name)}
-      <span class="tab-badge">${tab.matchups.length}</span>
-      <span class="tab-close" onclick="event.stopPropagation();removeTab('${tab.id}')" title="Eliminar ronda">×</span>
-    </button>
-  `).join('') + `<button class="add-tab-btn" onclick="openAddTabModal()" title="Nueva ronda">＋</button>`;
-    }
-
-    function renderArena() {
-      if (!state.activeTab || state.tabs.length === 0) { showEmptyState(); return; }
-      hideEmptyState();
-      const tab = state.tabs.find(t => t.id === state.activeTab);
-      if (!tab) return;
-
-      const arena = document.getElementById('arena');
-
-      // Find unassigned players
-      const assignedPlayers = new Set();
-      tab.matchups.forEach(m => m.slots.forEach(s => { if (s) assignedPlayers.add(s); }));
-      const unassigned = state.players.filter(p => !assignedPlayers.has(p.id));
-
-      let html = '';
-
-      // Unassigned section
-      if (unassigned.length > 0 || state.players.length === 0) {
-        html += `<div class="unassigned-section">
-      <div class="unassigned-header">⚡ JUGADORES SIN ASIGNAR — Arrastra a un enfrentamiento</div>
-      <div class="unassigned-grid" id="unassignedGrid"
-        ondragover="event.preventDefault()"
-        ondrop="onDropUnassigned(event,'${tab.id}')">
-        ${unassigned.length === 0 ? '<span style="color:var(--text3);font-size:13px;">Todos los jugadores asignados</span>' :
-            unassigned.map(p => `
-            <div class="unassigned-player" draggable="true"
-              ondragstart="onDragStart(event,'player','${p.id}')"
-              ondragend="onDragEnd(event)">
-              <div class="player-avatar" style="width:28px;height:28px;font-size:12px;">${getPlayerName(tab.id, p.id).charAt(0).toUpperCase()}</div>
-              <span style="font-size:13px;font-weight:600;">${escHtml(getPlayerName(tab.id, p.id))}</span>
-            </div>
-          `).join('')}
-      </div>
-    </div>`;
-      }
-
-      // Matchups
-      tab.matchups.forEach((matchup, mi) => {
-        html += renderMatchup(tab, matchup, mi);
-      });
-
-      // Add matchup button
-      html += `<button class="add-matchup-btn" onclick="addMatchup('${tab.id}')">
-    + Añadir Enfrentamiento
-  </button>`;
-
-      arena.innerHTML = html;
-      renderTabs();
-    }
-
-    function renderMatchup(tab, matchup, idx) {
-      const slots = [0, 1].map(si => {
-        const pid = matchup.slots[si];
-        if (!pid) {
-          return `<div class="slot" data-tab="${tab.id}" data-matchup="${matchup.id}" data-slot="${si}"
-        ondragover="onDragOverSlot(event)"
-        ondragleave="onDragLeaveSlot(event)"
-        ondrop="onDropSlot(event,'${tab.id}','${matchup.id}','${si}')">
-        <div class="slot-placeholder">
-          <span class="ph-icon">👤</span>
-          <span>Arrastra un jugador aquí</span>
-        </div>
-      </div>`;
-        }
-
-        const name = getPlayerName(tab.id, pid);
-        const myPicks = state.picks[tab.id]?.[pid] || [null, null, null, null, null, null];
-
-        // Ban section vars — computed outside template literal to avoid parser issues
-        const bannedPk = (state.bans[tab.id] && state.bans[tab.id][pid]) ? state.bans[tab.id][pid] : null;
-        const banSprite = bannedPk && state.pokemonMap[bannedPk] ? state.pokemonMap[bannedPk].sprite : '';
-        const banPickerId = ('banpicker_' + tab.id + '_' + pid).replace(/[^a-z0-9_]/gi, '_');
-        const banSectionHtml = `<div class="ban-section">
-      <span class="ban-label">🚫 BAN</span>
-      <div class="ban-slot ${bannedPk ? 'has-ban' : ''}"
-        id="${banPickerId}"
-        onclick="toggleBanPicker('${banPickerId}','${tab.id}','${pid}',event)">
-        ${bannedPk && banSprite ? `<img class="ban-pokemon-img" src="${banSprite}" alt="${bannedPk}" onerror="this.style.display='none'">` : ''}
-        ${bannedPk ? `<span class="ban-name">${capitalize(bannedPk)}</span>` : `<span class="ban-placeholder">Elegir pokémon a banear...</span>`}
-      </div>
-      ${bannedPk ? `<button class="ban-clear" onclick="event.stopPropagation();setBan('${tab.id}','${pid}',null)" title="Quitar ban">×</button>` : ''}
-    </div>`;
-        const picksHtml = [0, 1, 2, 3, 4, 5].map(pi => {
-          const selected = myPicks[pi];
-          const available = getAvailablePokemon(tab.id, pid, pi);
-          const sprite = selected && state.pokemonMap[selected] ? state.pokemonMap[selected].sprite : '';
-          const pickerId = `picker_${tab.id}_${pid}_${pi}`.replace(/[^a-z0-9_]/gi, '_');
-
-          return `<div class="pick-slot">
-        <span class="pick-num">${pi + 1}</span>
-        ${sprite ? `<img class="pick-pokemon-img" src="${sprite}" alt="${selected}" title="${capitalize(selected)}" onerror="this.style.display='none'">` : `<div style="height:52px;display:flex;align-items:center;justify-content:center;font-size:24px;opacity:0.2">?</div>`}
-        <div class="pokepicker" id="${pickerId}">
-          <button class="pokepicker-trigger ${selected ? 'has-value' : ''}"
-            onclick="togglePicker('${pickerId}','${tab.id}','${pid}','${pi}',event)">
-            ${selected ? capitalize(selected) : '— elegir —'}
-          </button>
-        </div>
-      </div>`;
-        }).join('');
-
-        return `<div class="slot"
-      ondragover="onDragOverSlot(event)"
-      ondragleave="onDragLeaveSlot(event)"
-      ondrop="onDropSlot(event,'${tab.id}','${matchup.id}','${si}')">
-      <div class="player-card" draggable="true"
-        ondragstart="onDragStart(event,'assigned','${pid}','${tab.id}','${matchup.id}','${si}')"
-        ondragend="onDragEnd(event)">
-        <div class="card-header">
-          <div class="card-avatar" data-player-avatar="${pid}">${name.charAt(0).toUpperCase()}</div>
-          <div>
-            <input class="player-name-input" value="${escHtml(name)}" style="font-size:14px"
-              oninput="updateTabPlayerName('${tab.id}','${pid}',this.value);document.querySelectorAll('[data-player-name-display=\\'${pid}\\']').forEach(e=>e.textContent=this.value)"
-              onchange="updateTabPlayerName('${tab.id}','${pid}',this.value)"
-              draggable="false" onclick="event.stopPropagation()"
-              placeholder="Nombre...">
-          </div>
-          <button class="remove-player-btn" style="margin-left:auto"
-            onclick="removeFromSlot('${tab.id}','${matchup.id}','${si}')" title="Quitar del enfrentamiento">×</button>
-        </div>
-        <div class="card-body">
-          <div class="picks-grid">${picksHtml}</div>
-        </div>
-        ${banSectionHtml}
-      </div>
-    </div>`;
-      });
-
-      return `<div class="matchup">
-    <div class="matchup-header">
-      ENFRENTAMIENTO ${idx + 1}
-      <span style="margin-left:auto">
-        <button class="btn btn-danger btn-sm" onclick="removeMatchup('${tab.id}','${matchup.id}')">Eliminar</button>
-      </span>
-    </div>
-    <div class="matchup-slots">
-      ${slots[0]}
-      <div class="vs-divider"><span class="vs-text">VS</span></div>
-      ${slots[1]}
-    </div>
-  </div>`;
-    }
-
     function removeFromSlot(tabId, matchupId, slotIdx) {
-      const tab = state.tabs.find(t => t.id === tabId);
+      var tab = state.tabs.find(function (t) { return t.id === tabId; });
       if (!tab) return;
-      const m = tab.matchups.find(x => x.id === matchupId);
+      var m = tab.matchups.find(function (x) { return x.id === matchupId; });
       if (!m) return;
       m.slots[slotIdx] = null;
       renderArena();
     }
 
-    // ─── DRAG & DROP ─────────────────────────────────────────────────────────────
+    // ── PICKS & BANS ───────────────────────────────────────────────────────────────
+    // Todos los picks usados en rondas anteriores
+    function getPlayerPastPicks(tabId, pid) {
+      var picks = new Set();
+      var tabIdx = state.tabs.findIndex(function (t) { return t.id === tabId; });
+      for (var i = 0; i < tabIdx; i++) {
+        var tId = state.tabs[i].id;
+        if (state.picks[tId] && state.picks[tId][pid])
+          state.picks[tId][pid].forEach(function (pk) { if (pk) picks.add(pk); });
+      }
+      return picks;
+    }
+    // Solo los revividos explícitamente por el jugador
+    function getPlayerRevivals(tabId, pid) {
+      var revivals = new Set();
+      var tabIdx = state.tabs.findIndex(function (t) { return t.id === tabId; });
+      for (var i = 0; i < tabIdx; i++) {
+        var tId = state.tabs[i].id;
+        if (state.revivals[tId] && state.revivals[tId][pid])
+          revivals.add(state.revivals[tId][pid]);
+      }
+      return revivals;
+    }
+    function getTabAllPicks(tabId) {
+      var picks = {};
+      if (!state.picks[tabId]) return picks;
+      Object.entries(state.picks[tabId]).forEach(function (entry) {
+        var pid = entry[0], arr = entry[1];
+        arr.forEach(function (pk) { if (pk) picks[pk] = pid; });
+      });
+      return picks;
+    }
+    function getTabBans(tabId) {
+      var banned = new Set();
+      if (!state.bans[tabId]) return banned;
+      Object.values(state.bans[tabId]).forEach(function (pk) { if (pk) banned.add(pk); });
+      return banned;
+    }
+    function setPick(tabId, pid, slot, pokemon) {
+      if (!state.picks[tabId]) state.picks[tabId] = {};
+      if (!state.picks[tabId][pid]) state.picks[tabId][pid] = [null, null, null, null, null, null];
+      state.picks[tabId][pid][slot] = pokemon || null;
+      renderArena();
+    }
+    function setWinner(tabId, pid, val) {
+      if (!state.winners[tabId]) state.winners[tabId] = {};
+      state.winners[tabId][pid] = val;
+      // Si se marca ganador, desmarcar al rival en el mismo enfrentamiento
+      if (val) {
+        var tab = state.tabs.find(function (t) { return t.id === tabId; });
+        if (tab) {
+          tab.matchups.forEach(function (m) {
+            if (m.slots.indexOf(pid) !== -1) {
+              m.slots.forEach(function (rivalId) {
+                if (rivalId && rivalId !== pid) {
+                  state.winners[tabId][rivalId] = false;
+                  if (!state.revivals[tabId]) state.revivals[tabId] = {};
+                  state.revivals[tabId][rivalId] = null;
+                  if (!state.survivors[tabId]) state.survivors[tabId] = {};
+                  state.survivors[tabId][rivalId] = 0;
+                }
+              });
+            }
+          });
+        }
+      }
+      // Si se desmarca, limpiar revival y supervivientes propios
+      if (!val) {
+        if (!state.revivals[tabId]) state.revivals[tabId] = {};
+        state.revivals[tabId][pid] = null;
+        if (!state.survivors[tabId]) state.survivors[tabId] = {};
+        state.survivors[tabId][pid] = 0;
+      }
+      renderArena();
+    }
+    function setSurvivors(tabId, pid, val) {
+      if (!state.survivors[tabId]) state.survivors[tabId] = {};
+      state.survivors[tabId][pid] = Math.max(0, Math.min(6, parseInt(val) || 0));
+      renderArena();
+    }
+    function setRevival(tabId, pid, pokemon) {
+      if (!state.revivals[tabId]) state.revivals[tabId] = {};
+      state.revivals[tabId][pid] = pokemon || null;
+      renderArena();
+    }
+
+    function setBan(tabId, pid, pokemon) {
+      if (!state.bans[tabId]) state.bans[tabId] = {};
+      state.bans[tabId][pid] = pokemon || null;
+      closePicker();
+      renderArena();
+    }
+    function getAvailablePokemon(tabId, pid, slotIdx) {
+      var pastPicks = getPlayerPastPicks(tabId, pid);
+      var revivals = getPlayerRevivals(tabId, pid);
+      var tabPicks = getTabAllPicks(tabId);
+      var tabBans = getTabBans(tabId);
+      var myPicks = (state.picks[tabId] && state.picks[tabId][pid]) ? state.picks[tabId][pid] : [];
+      var currentSelected = myPicks[slotIdx];
+      var usedGens = new Set();
+      myPicks.forEach(function (pk, i) {
+        if (i !== slotIdx && pk && state.pokemonMap[pk] && state.pokemonMap[pk].gen)
+          usedGens.add(state.pokemonMap[pk].gen);
+      });
+      return state.allPokemon
+        .filter(function (name) {
+          if (name === currentSelected) return true;
+          // Excluir si fue usado en rondas anteriores Y no fue revivido
+          if (pastPicks.has(name) && !revivals.has(name)) return false;
+          // Excluir si otro jugador ya lo tiene en esta ronda
+          if (tabPicks[name] && tabPicks[name] !== pid) return false;
+          // Excluir mis otros picks de esta ronda
+          for (var i = 0; i < myPicks.length; i++)
+            if (i !== slotIdx && myPicks[i] === name) return false;
+          return true;
+        })
+        .map(function (name) {
+          var pkmn = state.pokemonMap[name];
+          var gen = pkmn ? pkmn.gen : 0;
+          var genBlocked = gen > 0 && usedGens.has(gen) && name !== currentSelected;
+          var banned = tabBans.has(name) && name !== currentSelected;
+          var revived = revivals.has(name);
+          return { name: name, revived: revived, gen: gen, genBlocked: genBlocked, banned: banned };
+        });
+    }
+
+    function computeStandings() {
+      var scores = {};
+      state.players.forEach(function (p) { scores[p.id] = { wins: 0, pts: 0, survivors: 0 }; });
+      state.tabs.forEach(function (tab) {
+        tab.matchups.forEach(function (matchup) {
+          matchup.slots.forEach(function (pid) {
+            if (!pid) return;
+            if (!scores[pid]) scores[pid] = { wins: 0, pts: 0, survivors: 0 };
+            if (state.winners[tab.id] && state.winners[tab.id][pid]) {
+              scores[pid].wins++;
+              scores[pid].pts += 3;
+              var surv = (state.survivors[tab.id] && state.survivors[tab.id][pid]) ? state.survivors[tab.id][pid] : 0;
+              scores[pid].survivors += surv;
+            }
+          });
+        });
+      });
+      return state.players.map(function (p) {
+        var s = scores[p.id] || { wins: 0, pts: 0, survivors: 0 };
+        return { id: p.id, name: p.name, wins: s.wins, pts: s.pts, survivors: s.survivors };
+      }).sort(function (a, b) {
+        return b.pts - a.pts || b.survivors - a.survivors || b.wins - a.wins || a.name.localeCompare(b.name);
+      });
+    }
+
+    function renderStandings() {
+      hideEmptyState();
+      var arena = document.getElementById('arena');
+      var rows = computeStandings();
+      var html = '<div class="standings-arena">';
+      if (rows.length === 0) {
+        html += '<div class="standings-empty">Añade jugadores para ver la clasificación</div>';
+      } else {
+        var leader = rows[0];
+        if (leader.pts > 0) {
+          html += '<div class="banner-winner"><div class="banner-trophy">🏆</div><div class="banner-text">' +
+            '<h2>LÍDER ACTUAL</h2><p>' + escHtml(leader.name) + ' — ' + leader.pts + ' pts</p></div></div>';
+        }
+        html += '<table class="standings-table"><thead><tr>' +
+          '<th style="width:48px">#</th><th>Jugador</th>' +
+          '<th class="right">Victorias</th><th class="right">Supervivientes</th><th class="right">Puntos</th></tr></thead><tbody>';
+        rows.forEach(function (row, i) {
+          var rank = i + 1;
+          var rankClass = rank === 1 ? 'rank-1' : rank === 2 ? 'rank-2' : rank === 3 ? 'rank-3' : '';
+          var avatar = row.name.charAt(0).toUpperCase() || '?';
+          html += '<tr>' +
+            '<td><span class="rank-num ' + rankClass + '">' + rank + '</span></td>' +
+            '<td><div style="display:flex;align-items:center;gap:0.6rem;">' +
+            '<div class="player-avatar" style="width:32px;height:32px;font-size:13px;flex-shrink:0">' + avatar + '</div>' +
+            '<span style="font-weight:600">' + escHtml(row.name) + '</span>' +
+            (rank === 1 && row.pts > 0 ? ' <span style="font-size:16px">👑</span>' : '') +
+            '</div></td>' +
+            '<td class="right"><span class="wins-badge">🏅 ' + row.wins + '</span></td>' +
+            '<td class="right"><span style="font-size:12px;color:#60a5fa;background:rgba(96,165,250,0.1);border:1px solid rgba(96,165,250,0.25);padding:2px 8px;border-radius:20px;">🛡️ ' + row.survivors + '</span></td>' +
+            '<td class="right"><span class="pts-badge">' + row.pts + ' pts</span></td></tr>';
+        });
+        html += '</tbody></table>';
+      }
+      html += '</div>';
+      arena.innerHTML = html;
+    }
+
+
+    function escHtml(s) {
+      return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+    function capitalize(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : ''; }
+    function openModal(id) { document.getElementById(id).classList.add('open'); }
+    function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+    function showEmptyState() { document.getElementById('emptyState').style.display = 'flex'; document.getElementById('arena').style.display = 'none'; }
+    function hideEmptyState() { document.getElementById('emptyState').style.display = 'none'; document.getElementById('arena').style.display = 'block'; }
+
+    function renderSidebar() {
+      var list = document.getElementById('playersList');
+      if (state.players.length === 0) {
+        list.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--text3);font-size:13px;">Añade jugadores para empezar</div>';
+        return;
+      }
+      list.innerHTML = state.players.map(function (p) {
+        return '<div class="player-item" draggable="true" ondragstart="onDragStart(event,\'player\',\'' + p.id + '\')" ondragend="onDragEnd(event)">' +
+          '<div class="player-avatar">' + (p.name.charAt(0).toUpperCase() || '?') + '</div>' +
+          '<input class="player-name-input" value="' + escHtml(p.name) + '" onchange="updatePlayerName(\'' + p.id + '\',this.value)" oninput="updatePlayerName(\'' + p.id + '\',this.value)" placeholder="Nombre..." draggable="false" onclick="event.stopPropagation()">' +
+          '<button class="remove-player-btn" onclick="removePlayer(\'' + p.id + '\')" title="Eliminar">×</button></div>';
+      }).join('');
+    }
+
+    function renderTabs() {
+      var bar = document.getElementById('tabsBar');
+      bar.innerHTML = state.tabs.map(function (tab) {
+        return '<button class="tab-btn ' + (tab.id === state.activeTab ? 'active' : '') + '" onclick="switchTab(\'' + tab.id + '\')">' +
+          escHtml(tab.name) +
+          '<span class="tab-badge">' + tab.matchups.length + '</span>' +
+          '<span class="tab-close" onclick="event.stopPropagation();removeTab(\'' + tab.id + '\')">×</span></button>';
+      }).join('') +
+        '<button class="add-tab-btn" onclick="openAddTabModal()">＋</button>' +
+        '<button class="tab-btn standings-tab ' + (state.activeTab === '__standings__' ? 'active' : '') + '" onclick="switchTab(\'__standings__\')" style="margin-left:auto">🏆 Clasificación</button>';
+    }
+
+    function renderArena() {
+      if (state.activeTab === '__standings__') { renderStandings(); return; }
+      if (!state.activeTab || state.tabs.length === 0) { showEmptyState(); return; }
+      hideEmptyState();
+      var tab = state.tabs.find(function (t) { return t.id === state.activeTab; });
+      if (!tab) return;
+      var arena = document.getElementById('arena');
+      var assigned = new Set();
+      tab.matchups.forEach(function (m) { m.slots.forEach(function (s) { if (s) assigned.add(s); }); });
+      var unassigned = state.players.filter(function (p) { return !assigned.has(p.id); });
+      var html = '';
+      if (unassigned.length > 0 || state.players.length === 0) {
+        html += '<div class="unassigned-section"><div class="unassigned-header">⚡ JUGADORES SIN ASIGNAR — Arrastra a un enfrentamiento</div>' +
+          '<div class="unassigned-grid" ondragover="event.preventDefault()" ondrop="onDropUnassigned(event,\'' + tab.id + '\')">' +
+          (unassigned.length === 0 ? '<span style="color:var(--text3);font-size:13px;">Todos asignados</span>' :
+            unassigned.map(function (p) {
+              return '<div class="unassigned-player" draggable="true" ondragstart="onDragStart(event,\'player\',\'' + p.id + '\')" ondragend="onDragEnd(event)">' +
+                '<div class="player-avatar" style="width:28px;height:28px;font-size:12px;">' + getPlayerName(tab.id, p.id).charAt(0).toUpperCase() + '</div>' +
+                '<span style="font-size:13px;font-weight:600;">' + escHtml(getPlayerName(tab.id, p.id)) + '</span></div>';
+            }).join('')) + '</div></div>';
+      }
+      tab.matchups.forEach(function (matchup, mi) { html += renderMatchup(tab, matchup, mi); });
+      html += '<button class="add-matchup-btn" onclick="addMatchup(\'' + tab.id + '\')">+ Añadir Enfrentamiento</button>';
+      arena.innerHTML = html;
+      renderTabs();
+    }
+
+    function renderMatchup(tab, matchup, idx) {
+      var slotsHtml = [0, 1].map(function (si) {
+        var pid = matchup.slots[si];
+        if (!pid) {
+          return '<div class="slot" ondragover="onDragOverSlot(event)" ondragleave="onDragLeaveSlot(event)" ondrop="onDropSlot(event,\'' + tab.id + '\',\'' + matchup.id + '\',\'' + si + '\')">' +
+            '<div class="slot-placeholder"><span class="ph-icon">👤</span><span>Arrastra un jugador aquí</span></div></div>';
+        }
+        var name = getPlayerName(tab.id, pid);
+        var myPicks = (state.picks[tab.id] && state.picks[tab.id][pid]) ? state.picks[tab.id][pid] : [null, null, null, null, null, null];
+        var picksHtml = [0, 1, 2, 3, 4, 5].map(function (pi) {
+          var selected = myPicks[pi];
+          var sprite = selected && state.pokemonMap[selected] ? state.pokemonMap[selected].sprite : '';
+          var pickerId = ('picker_' + tab.id + '_' + pid + '_' + pi).replace(/[^a-z0-9_]/gi, '_');
+          return '<div class="pick-slot"><span class="pick-num">' + (pi + 1) + '</span>' +
+            (sprite ? '<img class="pick-pokemon-img" src="' + sprite + '" alt="' + selected + '" onerror="this.style.display=\'none\'">' :
+              '<div style="height:52px;display:flex;align-items:center;justify-content:center;font-size:24px;opacity:0.2">?</div>') +
+            '<div class="pokepicker" id="' + pickerId + '">' +
+            '<button class="pokepicker-trigger ' + (selected ? 'has-value' : '') + '" onclick="togglePicker(\'' + pickerId + '\',\'' + tab.id + '\',\'' + pid + '\',\'' + pi + '\',event)">' +
+            (selected ? capitalize(selected) : '— elegir —') + '</button></div></div>';
+        }).join('');
+        var bannedPk = (state.bans[tab.id] && state.bans[tab.id][pid]) ? state.bans[tab.id][pid] : null;
+        var banSprite = bannedPk && state.pokemonMap[bannedPk] ? state.pokemonMap[bannedPk].sprite : '';
+        var banPickerId = ('banpicker_' + tab.id + '_' + pid).replace(/[^a-z0-9_]/gi, '_');
+        var banHtml = '<div class="ban-section"><span class="ban-label">🚫 BAN</span>' +
+          '<div class="ban-slot ' + (bannedPk ? 'has-ban' : '') + '" id="' + banPickerId + '" onclick="toggleBanPicker(\'' + banPickerId + '\',\'' + tab.id + '\',\'' + pid + '\',event)">' +
+          (bannedPk && banSprite ? '<img class="ban-pokemon-img" src="' + banSprite + '" alt="' + bannedPk + '" onerror="this.style.display=\'none\'">' : '') +
+          (bannedPk ? '<span class="ban-name">' + capitalize(bannedPk) + '</span>' : '<span class="ban-placeholder">Elegir pokémon a banear...</span>') +
+          '</div>' + (bannedPk ? '<button class="ban-clear" onclick="event.stopPropagation();setBan(\'' + tab.id + '\',\'' + pid + '\',null)" title="Quitar ban">×</button>' : '') +
+          '</div>';
+
+        // Winner / Revival section
+        var isWinner = !!(state.winners[tab.id] && state.winners[tab.id][pid]);
+        // Comprobar si el rival en este enfrentamiento ya es ganador
+        var rivalIsWinner = false;
+        var rivalSlotIdx = si === 0 ? 1 : 0;
+        var rivalPid = matchup.slots[rivalSlotIdx];
+        if (rivalPid && state.winners[tab.id] && state.winners[tab.id][rivalPid]) rivalIsWinner = true;
+        var winnerDisabled = !isWinner && rivalIsWinner;
+        var survivorCount = (state.survivors[tab.id] && state.survivors[tab.id][pid]) ? state.survivors[tab.id][pid] : 0;
+        var revivalPk = (state.revivals[tab.id] && state.revivals[tab.id][pid]) ? state.revivals[tab.id][pid] : null;
+        var revivalSprite = revivalPk && state.pokemonMap[revivalPk] ? state.pokemonMap[revivalPk].sprite : '';
+        var revivalPickerId = ('revivalpicker_' + tab.id + '_' + pid).replace(/[^a-z0-9_]/gi, '_');
+        // Pokémon usados en esta ronda (para elegir revival)
+        var myPicksForRevival = (state.picks[tab.id] && state.picks[tab.id][pid]) ? state.picks[tab.id][pid].filter(function (p) { return !!p; }) : [];
+        var revivalPickerHtml = '';
+        if (isWinner) {
+          revivalPickerHtml = '<div class="revival-picker">' +
+            '<span class="revival-label">💊 REVIVIR</span>' +
+            '<div class="revival-slot ' + (revivalPk ? 'has-revival' : '') + '" id="' + revivalPickerId + '" onclick="toggleRevivalPicker(\'' + revivalPickerId + '\',\'' + tab.id + '\',\'' + pid + '\',event)">' +
+            (revivalPk && revivalSprite ? '<img class="revival-pokemon-img" src="' + revivalSprite + '" alt="' + revivalPk + '" onerror="this.style.display=\'none\'">' : '') +
+            (revivalPk ? '<span class="revival-name">' + capitalize(revivalPk) + '</span>' : '<span class="revival-placeholder">' + (myPicksForRevival.length ? 'Elige pokémon a revivir...' : 'Aún no hay picks') + '</span>') +
+            '</div>' +
+            (revivalPk ? '<button class="revival-clear" onclick="event.stopPropagation();setRevival(\'' + tab.id + '\',\'' + pid + '\',null)" title="Quitar revival">×</button>' : '') +
+            '</div>';
+        }
+        var winnerHtml = '<div class="winner-section">' +
+          '<label class="winner-toggle" style="' + (winnerDisabled ? 'opacity:0.4;cursor:not-allowed;' : '') + '">' +
+          '<input type="checkbox" ' + (isWinner ? 'checked' : '') + (winnerDisabled ? ' disabled' : '') + ' onchange="setWinner(\'' + tab.id + '\',\'' + pid + '\',this.checked)">' +
+          '<span class="winner-chip">🏆 GANADOR</span>' +
+          '</label>' +
+          (isWinner ? '<div class="survivors-field">' +
+            '<span class="survivors-label">🛡️ SUPERVIVIENTES</span>' +
+            '<div class="survivors-counter">' +
+            '<button class="surv-btn" onclick="setSurvivors(\'' + tab.id + '\',\'' + pid + '\',' + (survivorCount - 1) + ')" ' + (survivorCount <= 0 ? 'disabled' : '') + '>−</button>' +
+            '<span class="surv-num">' + survivorCount + '</span>' +
+            '<button class="surv-btn" onclick="setSurvivors(\'' + tab.id + '\',\'' + pid + '\',' + (survivorCount + 1) + ')" ' + (survivorCount >= 6 ? 'disabled' : '') + '>+</button>' +
+            '</div></div>' : '') +
+          revivalPickerHtml +
+          '</div>';
+
+        return '<div class="slot" ondragover="onDragOverSlot(event)" ondragleave="onDragLeaveSlot(event)" ondrop="onDropSlot(event,\'' + tab.id + '\',\'' + matchup.id + '\',\'' + si + '\')">' +
+          '<div class="player-card" draggable="true" ondragstart="onDragStart(event,\'assigned\',\'' + pid + '\',\'' + tab.id + '\',\'' + matchup.id + '\',\'' + si + '\')" ondragend="onDragEnd(event)">' +
+          '<div class="card-header"><div class="card-avatar">' + name.charAt(0).toUpperCase() + '</div>' +
+          '<input class="player-name-input" value="' + escHtml(name) + '" style="font-size:14px" oninput="updateTabPlayerName(\'' + tab.id + '\',\'' + pid + '\',this.value)" onchange="updateTabPlayerName(\'' + tab.id + '\',\'' + pid + '\',this.value)" draggable="false" onclick="event.stopPropagation()" placeholder="Nombre...">' +
+          '<button class="remove-player-btn" style="margin-left:auto" onclick="removeFromSlot(\'' + tab.id + '\',\'' + matchup.id + '\',\'' + si + '\')" title="Quitar">×</button></div>' +
+          '<div class="card-body"><div class="picks-grid">' + picksHtml + '</div></div>' +
+          winnerHtml + banHtml + '</div></div>';
+      });
+      return '<div class="matchup"><div class="matchup-header">ENFRENTAMIENTO ' + (idx + 1) +
+        '<span style="margin-left:auto"><button class="btn btn-danger btn-sm" onclick="removeMatchup(\'' + tab.id + '\',\'' + matchup.id + '\')">Eliminar</button></span></div>' +
+        '<div class="matchup-slots">' + slotsHtml[0] + '<div class="vs-divider"><span class="vs-text">VS</span></div>' + slotsHtml[1] + '</div></div>';
+    }
+
+    // ── DRAG & DROP ────────────────────────────────────────────────────────────────
+    var autoScrollRAF = null;
+    var dragClientY = 0;
+    var dragClientX = 0;
+    var SCROLL_ZONE = 80;   // px desde el borde donde activa el scroll
+    var SCROLL_SPEED = 12;  // px por frame
+
+    function startAutoScroll() {
+      var arena = document.getElementById('arena');
+      function step() {
+        var wy = window.innerHeight, wx = window.innerWidth;
+        // Window scroll vertical
+        if (dragClientY < SCROLL_ZONE) {
+          window.scrollBy(0, -SCROLL_SPEED * (1 - dragClientY / SCROLL_ZONE));
+        } else if (dragClientY > wy - SCROLL_ZONE) {
+          window.scrollBy(0, SCROLL_SPEED * (1 - (wy - dragClientY) / SCROLL_ZONE));
+        }
+        // Arena div scroll
+        if (arena) {
+          var r = arena.getBoundingClientRect();
+          var relY = dragClientY - r.top;
+          var h = r.height;
+          if (relY < SCROLL_ZONE && relY > 0) {
+            arena.scrollTop -= SCROLL_SPEED * (1 - relY / SCROLL_ZONE);
+          } else if (relY > h - SCROLL_ZONE && relY < h) {
+            arena.scrollTop += SCROLL_SPEED * (1 - (h - relY) / SCROLL_ZONE);
+          }
+        }
+        autoScrollRAF = requestAnimationFrame(step);
+      }
+      autoScrollRAF = requestAnimationFrame(step);
+    }
+
+    function stopAutoScroll() {
+      if (autoScrollRAF) { cancelAnimationFrame(autoScrollRAF); autoScrollRAF = null; }
+    }
+
+    document.addEventListener('dragover', function (e) {
+      dragClientY = e.clientY;
+      dragClientX = e.clientX;
+    });
+
     function onDragStart(e, type, pid, tabId, matchupId, slotIdx) {
-      dragData = { type, pid, tabId, matchupId, slotIdx: slotIdx !== undefined ? parseInt(slotIdx) : undefined };
+      dragData = { type: type, pid: pid, tabId: tabId, matchupId: matchupId, slotIdx: slotIdx !== undefined ? parseInt(slotIdx) : undefined };
       e.dataTransfer.effectAllowed = 'move';
-      setTimeout(() => {
+      dragClientY = e.clientY;
+      dragClientX = e.clientX;
+      startAutoScroll();
+      setTimeout(function () {
         if (e.target.classList.contains('player-card')) e.target.classList.add('dragging');
         if (e.target.classList.contains('player-item')) e.target.style.opacity = '0.4';
         if (e.target.classList.contains('unassigned-player')) e.target.style.opacity = '0.4';
       }, 0);
     }
-
     function onDragEnd(e) {
-      e.target.classList.remove('dragging');
-      e.target.style.opacity = '';
-      document.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
+      stopAutoScroll();
+      e.target.classList.remove('dragging'); e.target.style.opacity = '';
+      document.querySelectorAll('.drag-over').forEach(function (el) { el.classList.remove('drag-over'); });
       dragData = null;
     }
-
-    function onDragOverSlot(e) {
-      e.preventDefault();
-      e.currentTarget.classList.add('drag-over');
-    }
-
-    function onDragLeaveSlot(e) {
-      e.currentTarget.classList.remove('drag-over');
-    }
-
+    function onDragOverSlot(e) { e.preventDefault(); e.currentTarget.classList.add('drag-over'); }
+    function onDragLeaveSlot(e) { e.currentTarget.classList.remove('drag-over'); }
     function onDropSlot(e, tabId, matchupId, slotIdx) {
-      e.preventDefault();
-      e.currentTarget.classList.remove('drag-over');
+      e.preventDefault(); e.currentTarget.classList.remove('drag-over');
       if (!dragData) return;
-
-      const tab = state.tabs.find(t => t.id === tabId);
+      var tab = state.tabs.find(function (t) { return t.id === tabId; });
       if (!tab) return;
-      const targetMatchup = tab.matchups.find(m => m.id === matchupId);
+      var targetMatchup = tab.matchups.find(function (m) { return m.id === matchupId; });
       if (!targetMatchup) return;
-      const targetSlotIdx = parseInt(slotIdx);
-      const pid = dragData.pid;
-
-      // Remove from previous location
+      var targetSlotIdx = parseInt(slotIdx);
+      var pid = dragData.pid;
       if (dragData.type === 'assigned') {
-        const srcTab = state.tabs.find(t => t.id === dragData.tabId);
+        var srcTab = state.tabs.find(function (t) { return t.id === dragData.tabId; });
         if (srcTab) {
-          const srcMatchup = srcTab.matchups.find(m => m.id === dragData.matchupId);
+          var srcMatchup = srcTab.matchups.find(function (m) { return m.id === dragData.matchupId; });
           if (srcMatchup) {
-            // Swap if target slot is occupied
-            const displaced = targetMatchup.slots[targetSlotIdx];
+            var displaced = targetMatchup.slots[targetSlotIdx];
             srcMatchup.slots[dragData.slotIdx] = displaced || null;
           }
         }
       } else {
-        // From sidebar or unassigned - clear any previous location in this tab
-        tab.matchups.forEach(m => {
-          m.slots = m.slots.map(s => s === pid ? null : s);
+        tab.matchups.forEach(function (m) {
+          m.slots = m.slots.map(function (s) { return s === pid ? null : s; });
         });
-        // Also handle if player was in source tab matchup (assigned type but different tab? - edge case)
       }
-
-      // Check if player already in target slot (same player)
       if (targetMatchup.slots[targetSlotIdx] === pid) return;
-
-      // Assign
       targetMatchup.slots[targetSlotIdx] = pid;
-
       renderArena();
     }
-
     function onDropUnassigned(e, tabId) {
       e.preventDefault();
       if (!dragData || dragData.type !== 'assigned') return;
-      const tab = state.tabs.find(t => t.id === tabId);
+      var tab = state.tabs.find(function (t) { return t.id === tabId; });
       if (!tab) return;
-      const srcMatchup = tab.matchups.find(m => m.id === dragData.matchupId);
+      var srcMatchup = tab.matchups.find(function (m) { return m.id === dragData.matchupId; });
       if (srcMatchup) srcMatchup.slots[dragData.slotIdx] = null;
       renderArena();
     }
 
-    // ─── UTILS ───────────────────────────────────────────────────────────────────
-    function escHtml(s) {
-      return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    // ── POKEPICKER ─────────────────────────────────────────────────────────────────
+    var activePickerDropdown = null;
+
+    function togglePicker(pickerId, tabId, pid, slotIdx, event) {
+      event.stopPropagation();
+      if (activePickerDropdown && activePickerDropdown.dataset.picker === pickerId) { closePicker(); return; }
+      closePicker();
+      var trigger = document.querySelector('#' + pickerId + ' .pokepicker-trigger');
+      if (!trigger) return;
+      var slotInt = parseInt(slotIdx);
+      var available = getAvailablePokemon(tabId, pid, slotInt);
+      var selected = state.picks[tabId] && state.picks[tabId][pid] ? state.picks[tabId][pid][slotInt] : null;
+      var dropdown = document.createElement('div');
+      dropdown.className = 'pokepicker-dropdown open';
+      dropdown.dataset.picker = pickerId;
+      dropdown.innerHTML = '<input class="pokepicker-search" type="text" placeholder="Buscar pokémon..." autocomplete="off" spellcheck="false">' +
+        '<div class="pokepicker-list"></div>' +
+        (selected ? '<button class="pokepicker-clear" onclick="setPick(\'' + tabId + '\',\'' + pid + '\',' + slotInt + ',null)">✕ Quitar selección</button>' : '');
+      document.body.appendChild(dropdown);
+      activePickerDropdown = dropdown;
+      positionDropdown(dropdown, trigger);
+      renderPickList(dropdown, available, selected, tabId, pid, slotInt, '');
+      var si = dropdown.querySelector('.pokepicker-search');
+      si.focus();
+      si.addEventListener('input', function () {
+        renderPickList(dropdown, available, selected, tabId, pid, slotInt, si.value.toLowerCase().trim());
+      });
+      si.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') { closePicker(); ev.stopPropagation(); } });
     }
 
-    function capitalize(s) {
-      return s ? s.charAt(0).toUpperCase() + s.slice(1) : '';
+    function toggleBanPicker(pickerId, tabId, pid, event) {
+      event.stopPropagation();
+      if (activePickerDropdown && activePickerDropdown.dataset.picker === pickerId) { closePicker(); return; }
+      closePicker();
+      var trigger = document.getElementById(pickerId);
+      if (!trigger) return;
+      var tabBans = getTabBans(tabId);
+      var tabPicks = getTabAllPicks(tabId);
+      var currentBan = state.bans[tabId] ? state.bans[tabId][pid] : null;
+      var available = state.allPokemon.filter(function (name) {
+        if (name === currentBan) return true;
+        if (tabBans.has(name)) return false;
+        return true;
+      }).map(function (name) {
+        return { name: name, alreadyPicked: !!(tabPicks[name]) };
+      });
+      var dropdown = document.createElement('div');
+      dropdown.className = 'pokepicker-dropdown open';
+      dropdown.dataset.picker = pickerId;
+      dropdown.innerHTML = '<div style="padding:6px 10px;font-size:10px;font-family:\'Press Start 2P\',monospace;color:#ef4444;border-bottom:1px solid var(--border);background:rgba(239,68,68,0.08)">🚫 BANEAR POKÉMON</div>' +
+        '<input class="pokepicker-search" type="text" placeholder="Buscar pokémon..." autocomplete="off" spellcheck="false">' +
+        '<div class="pokepicker-list"></div>' +
+        (currentBan ? '<button class="pokepicker-clear" onclick="setBan(\'' + tabId + '\',\'' + pid + '\',null)">✕ Quitar ban</button>' : '');
+      document.body.appendChild(dropdown);
+      activePickerDropdown = dropdown;
+      positionDropdown(dropdown, trigger);
+      renderBanList(dropdown, available, currentBan, tabId, pid, '');
+      var si = dropdown.querySelector('.pokepicker-search');
+      si.focus();
+      si.addEventListener('input', function () {
+        renderBanList(dropdown, available, currentBan, tabId, pid, si.value.toLowerCase().trim());
+      });
+      si.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') { closePicker(); ev.stopPropagation(); } });
     }
 
-    function openModal(id) { document.getElementById(id).classList.add('open'); }
-    function closeModal(id) { document.getElementById(id).classList.remove('open'); }
-
-    function showEmptyState() {
-      document.getElementById('emptyState').style.display = 'flex';
-      document.getElementById('arena').style.display = 'none';
-    }
-    function hideEmptyState() {
-      document.getElementById('emptyState').style.display = 'none';
-      document.getElementById('arena').style.display = 'block';
+    function positionDropdown(dropdown, trigger) {
+      var rect = trigger.getBoundingClientRect();
+      var spaceBelow = window.innerHeight - rect.bottom;
+      dropdown.style.left = Math.min(rect.left, window.innerWidth - 230) + 'px';
+      dropdown.style.top = (spaceBelow >= 280 || spaceBelow >= rect.top ? rect.bottom + 4 : rect.top - 284) + 'px';
     }
 
+    function renderPickList(dropdown, available, selected, tabId, pid, slotIdx, query) {
+      var list = dropdown.querySelector('.pokepicker-list');
+      var filtered = query ? available.filter(function (p) { return p.name.includes(query); }) : available;
+      if (filtered.length === 0) { list.innerHTML = '<div class="pokepicker-empty">Sin resultados</div>'; return; }
+      var sorted = filtered.slice().sort(function (a, b) {
+        var ra = a.banned ? 3 : a.genBlocked ? 2 : a.revived ? 1 : 0;
+        var rb = b.banned ? 3 : b.genBlocked ? 2 : b.revived ? 1 : 0;
+        return ra - rb;
+      });
+      list.innerHTML = sorted.slice(0, 100).map(function (item) {
+        var pk = item.name, revived = item.revived, genBlocked = item.genBlocked, banned = item.banned, gen = item.gen;
+        var sprite = state.pokemonMap[pk] ? state.pokemonMap[pk].sprite : '';
+        var genName = gen > 0 ? GEN_NAMES[gen] : '';
+        var badges = '';
+        if (revived) badges += '<span class="badge badge-gold">💊 Revivido</span>';
+        if (genBlocked) badges += '<span class="badge badge-red">🚫 ' + genName + '</span>';
+        if (banned) badges += '<span class="badge badge-banned">🚫 Baneado</span>';
+        var blocked = genBlocked || banned;
+        var clickAct = blocked
+          ? 'showToast(\'' + (banned ? 'Este pokémon está baneado esta ronda' : 'Ya tienes un pokémon de ' + genName) + '\')'
+          : 'pickAndClose(\'' + tabId + '\',\'' + pid + '\',' + slotIdx + ',\'' + pk + '\')';
+        return '<div class="pokepicker-item ' + (pk === selected ? 'selected' : '') + '" onclick="' + clickAct + '" style="' + (blocked ? 'opacity:.45;cursor:not-allowed;' : '') + '">' +
+          (sprite ? '<img src="' + sprite + '" alt="' + pk + '" onerror="this.style.display=\'none\'">' : '<div style="width:28px"></div>') +
+          '<span style="flex:1;text-transform:capitalize">' + capitalize(pk) + '</span>' + badges + '</div>';
+      }).join('') + (filtered.length > 100 ? '<div class="pokepicker-empty">+' + (filtered.length - 100) + ' más — escribe para filtrar</div>' : '');
+    }
+
+    function renderBanList(dropdown, available, selected, tabId, pid, query) {
+      var list = dropdown.querySelector('.pokepicker-list');
+      var filtered = query ? available.filter(function (p) { return p.name.includes(query); }) : available;
+      if (filtered.length === 0) { list.innerHTML = '<div class="pokepicker-empty">Sin resultados</div>'; return; }
+      var sorted = filtered.slice().sort(function (a, b) { return (a.alreadyPicked ? 1 : 0) - (b.alreadyPicked ? 1 : 0); });
+      list.innerHTML = sorted.slice(0, 100).map(function (item) {
+        var pk = item.name;
+        var sprite = state.pokemonMap[pk] ? state.pokemonMap[pk].sprite : '';
+        return '<div class="pokepicker-item ' + (pk === selected ? 'selected' : '') + '" onclick="closePicker();setBan(\'' + tabId + '\',\'' + pid + '\',\'' + pk + '\')">' +
+          (sprite ? '<img src="' + sprite + '" alt="' + pk + '" onerror="this.style.display=\'none\'">' : '<div style="width:28px"></div>') +
+          '<span style="flex:1;text-transform:capitalize">' + capitalize(pk) + '</span>' +
+          (item.alreadyPicked ? '<span style="font-size:10px;color:var(--text3)">pickeado</span>' : '') + '</div>';
+      }).join('') + (filtered.length > 100 ? '<div class="pokepicker-empty">+' + (filtered.length - 100) + ' más</div>' : '');
+    }
+
+    function pickAndClose(tabId, pid, slotIdx, pk) {
+      closePicker();
+      setPick(tabId, pid, slotIdx, pk);
+    }
+    function closePicker() {
+      if (activePickerDropdown) { activePickerDropdown.remove(); activePickerDropdown = null; }
+    }
+    function showToast(msg) {
+      var existing = document.querySelector('.toast-msg');
+      if (existing) return;
+      var t = document.createElement('div');
+      t.className = 'toast-msg';
+      t.textContent = msg;
+      t.style.cssText = 'position:fixed;bottom:1rem;left:50%;transform:translateX(-50%);background:#1e1e40;border:1px solid rgba(239,68,68,0.5);color:#fca5a5;font-size:13px;padding:8px 16px;border-radius:8px;z-index:9999;pointer-events:none;white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,0.4)';
+      document.body.appendChild(t);
+      setTimeout(function () { t.remove(); }, 2000);
+    }
+    document.addEventListener('click', function (e) {
+      if (activePickerDropdown && !activePickerDropdown.contains(e.target)) closePicker();
+    });
+    document.addEventListener('scroll', function () { closePicker(); }, true);
+
+    function toggleRevivalPicker(pickerId, tabId, pid, event) {
+      event.stopPropagation();
+      if (activePickerDropdown && activePickerDropdown.dataset.picker === pickerId) { closePicker(); return; }
+      closePicker();
+      var trigger = document.getElementById(pickerId);
+      if (!trigger) return;
+      var myPicks = (state.picks[tabId] && state.picks[tabId][pid]) ? state.picks[tabId][pid].filter(function (p) { return !!p; }) : [];
+      var currentRevival = state.revivals[tabId] ? state.revivals[tabId][pid] : null;
+      var dropdown = document.createElement('div');
+      dropdown.className = 'pokepicker-dropdown open';
+      dropdown.dataset.picker = pickerId;
+      dropdown.innerHTML =
+        '<div style="padding:6px 10px;font-size:10px;font-family:\'Press Start 2P\',monospace;color:#f59e0b;border-bottom:1px solid var(--border);background:rgba(245,158,11,0.08)">💊 POKÉMON A REVIVIR</div>' +
+        '<div class="pokepicker-list"></div>' +
+        (currentRevival ? '<button class="pokepicker-clear" onclick="closePicker();setRevival(\'' + tabId + '\',\'' + pid + '\',null)">✕ Quitar revival</button>' : '');
+      document.body.appendChild(dropdown);
+      activePickerDropdown = dropdown;
+      positionDropdown(dropdown, trigger);
+      var list = dropdown.querySelector('.pokepicker-list');
+      if (myPicks.length === 0) {
+        list.innerHTML = '<div class="pokepicker-empty">Aún no hay pokémon pickeados en esta ronda</div>';
+      } else {
+        list.innerHTML = myPicks.map(function (pk) {
+          var sprite = state.pokemonMap[pk] ? state.pokemonMap[pk].sprite : '';
+          return '<div class="pokepicker-item ' + (pk === currentRevival ? 'selected' : '') + '" onclick="closePicker();setRevival(\'' + tabId + '\',\'' + pid + '\',\'' + pk + '\')">' +
+            (sprite ? '<img src="' + sprite + '" alt="' + pk + '" onerror="this.style.display=\'none\'">' : '<div style="width:28px"></div>') +
+            '<span style="flex:1;text-transform:capitalize">' + capitalize(pk) + '</span></div>';
+        }).join('');
+      }
+    }
+
+    // ── IMPORT / EXPORT ────────────────────────────────────────────────────────────
     function exportData() {
-      const json = JSON.stringify(state, null, 2);
-      const blob = new Blob([json], { type: 'application/json' });
-      const a = document.createElement('a');
+      var json = JSON.stringify(state, null, 2);
+      var blob = new Blob([json], { type: 'application/json' });
+      var a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
       a.download = 'pokemon-draft.json';
       a.click();
     }
-
     function importData(event) {
-      const file = event.target.files[0];
+      var file = event.target.files[0];
       if (!file) return;
-      const reader = new FileReader();
-      reader.onload = e => {
+      var reader = new FileReader();
+      reader.onload = function (e) {
         try {
-          const imported = JSON.parse(e.target.result);
-          // Validate basic structure
-          if (!imported.players || !imported.tabs || !imported.picks) {
-            alert('Archivo no válido: faltan datos del torneo.');
-            return;
-          }
-          // Restore state (keep pokemonMap and allPokemon already loaded)
-          state.players = imported.players || [];
-          state.tabs = imported.tabs || [];
-          state.picks = imported.picks || {};
-          state.activeTab = imported.activeTab || (state.tabs.length > 0 ? state.tabs[0].id : null);
-          // Restore nextId to avoid collisions
-          let maxId = 0;
-          const extractNum = id => parseInt((id || '').replace('id_', '')) || 0;
-          state.players.forEach(p => maxId = Math.max(maxId, extractNum(p.id)));
-          state.tabs.forEach(t => {
-            maxId = Math.max(maxId, extractNum(t.id));
-            (t.matchups || []).forEach(m => maxId = Math.max(maxId, extractNum(m.id)));
+          var imp = JSON.parse(e.target.result);
+          if (!imp.players || !imp.tabs || !imp.picks) { alert('Archivo no válido.'); return; }
+          state.players = imp.players || [];
+          state.tabs = imp.tabs || [];
+          state.picks = imp.picks || {};
+          state.bans = imp.bans || {};
+          state.winners = imp.winners || {};
+          state.revivals = imp.revivals || {};
+          state.survivors = imp.survivors || {};
+          state.activeTab = imp.activeTab || (state.tabs.length > 0 ? state.tabs[0].id : null);
+          var maxId = 0;
+          function exNum(id) { return parseInt((id || '').replace('id_', '')) || 0; }
+          state.players.forEach(function (p) { maxId = Math.max(maxId, exNum(p.id)); });
+          state.tabs.forEach(function (t) {
+            maxId = Math.max(maxId, exNum(t.id));
+            (t.matchups || []).forEach(function (m) { maxId = Math.max(maxId, exNum(m.id)); });
           });
           nextId = maxId + 1;
-
-          renderSidebar();
-          renderTabs();
-          renderArena();
-        } catch (err) {
-          alert('Error al leer el archivo: ' + err.message);
-        }
-        // Reset input so the same file can be reimportado si hace falta
+          renderSidebar(); renderTabs(); renderArena();
+        } catch (err) { alert('Error: ' + err.message); }
         event.target.value = '';
       };
       reader.readAsText(file);
     }
 
-    // Close modal on overlay click
-    document.querySelectorAll('.modal-overlay').forEach(overlay => {
-      overlay.addEventListener('click', e => {
+    document.querySelectorAll('.modal-overlay').forEach(function (overlay) {
+      overlay.addEventListener('click', function (e) {
         if (e.target === overlay) overlay.classList.remove('open');
       });
     });
 
-    // ─── POKEPICKER ──────────────────────────────────────────────────────────────
-    let activePickerDropdown = null;
-    let activePicker = { tabId: null, pid: null, slotIdx: null };
-
-    function toggleBanPicker(pickerId, tabId, pid, event) {
-      event.stopPropagation();
-      if (activePickerDropdown && activePickerDropdown.dataset.picker === pickerId) {
-        closePicker();
-        return;
-      }
-      closePicker();
-
-      // Build available list for ban: all pokemon except already banned by others and already picked in this tab
-      const tabBans = getTabBans(tabId);
-      const tabPicks = getTabAllPicks(tabId);
-      const currentBan = state.bans[tabId]?.[pid] || null;
-
-      const available = state.allPokemon
-        .filter(name => {
-          if (name === currentBan) return true;
-          if (tabBans.has(name)) return false; // ya baneado por otro
-          return true;
-        })
-        .map(name => {
-          const alreadyPicked = !!(tabPicks[name]);
-          return { name, revived: false, gen: state.pokemonMap[name]?.gen || 0, genBlocked: false, banned: false, alreadyPicked };
-        });
-
-      activePicker = { tabId, pid, slotIdx: 'ban' };
-
-      const trigger = document.getElementById(pickerId);
-      const dropdown = document.createElement('div');
-      dropdown.className = 'pokepicker-dropdown open';
-      dropdown.dataset.picker = pickerId;
-      dropdown.dataset.isBan = '1';
-
-      dropdown.innerHTML = `
-    <div style="padding:6px 10px;font-size:10px;font-family:'Press Start 2P',monospace;color:#ef4444;border-bottom:1px solid var(--border);background:rgba(239,68,68,0.08)">🚫 BANEAR POKÉMON</div>
-    <input class="pokepicker-search" type="text" placeholder="Buscar pokémon..." autocomplete="off" spellcheck="false">
-    <div class="pokepicker-list" id="pklist_${pickerId}"></div>
-    ${currentBan ? `<button class="pokepicker-clear" onclick="setBan('${tabId}','${pid}',null)">✕ Quitar ban</button>` : ''}
-  `;
-
-      document.body.appendChild(dropdown);
-      activePickerDropdown = dropdown;
-      positionDropdown(dropdown, trigger);
-
-      renderBanPickerList(dropdown, available, currentBan, tabId, pid, '');
-
-      const searchInput = dropdown.querySelector('.pokepicker-search');
-      searchInput.focus();
-      searchInput.addEventListener('input', () => {
-        renderBanPickerList(dropdown, available, currentBan, tabId, pid, searchInput.value.toLowerCase().trim());
-      });
-      searchInput.addEventListener('keydown', e => {
-        if (e.key === 'Escape') { closePicker(); e.stopPropagation(); }
-      });
-    }
-
-    function renderBanPickerList(dropdown, available, selected, tabId, pid, query) {
-      const list = dropdown.querySelector('.pokepicker-list');
-      const filtered = query ? available.filter(p => p.name.includes(query)) : available;
-
-      if (filtered.length === 0) {
-        list.innerHTML = `<div class="pokepicker-empty">Sin resultados</div>`;
-        return;
-      }
-
-      // Already picked ones go at the bottom
-      const sorted = [...filtered].sort((a, b) => (a.alreadyPicked ? 1 : 0) - (b.alreadyPicked ? 1 : 0));
-
-      list.innerHTML = sorted.slice(0, 100).map(({ name: pk, alreadyPicked }) => {
-        const sprite = state.pokemonMap[pk]?.sprite || '';
-        return `<div class="pokepicker-item ${pk === selected ? 'selected' : ''}"
-      onclick="closePicker();setBan('${tabId}','${pid}','${pk}')">
-      ${sprite ? `<img src="${sprite}" alt="${pk}" onerror="this.style.display='none'">` : '<div style="width:28px"></div>'}
-      <span style="flex:1;text-transform:capitalize">${capitalize(pk)}</span>
-      ${alreadyPicked ? `<span style="font-size:10px;color:var(--text3);flex-shrink:0">ya pickeado</span>` : ''}
-    </div>`;
-      }).join('') + (filtered.length > 100 ? `<div class="pokepicker-empty">+${filtered.length - 100} más — filtra por nombre</div>` : '');
-    }
-
-
-    function togglePicker(pickerId, tabId, pid, slotIdx, event) {
-      event.stopPropagation();
-      if (activePickerDropdown && activePickerDropdown.dataset.picker === pickerId) {
-        closePicker();
-        return;
-      }
-      closePicker();
-      openPicker(pickerId, tabId, pid, parseInt(slotIdx));
-    }
-
-    function openPicker(pickerId, tabId, pid, slotIdx) {
-      const trigger = document.querySelector(`#${pickerId} .pokepicker-trigger`);
-      if (!trigger) return;
-
-      activePicker = { tabId, pid, slotIdx };
-      const available = getAvailablePokemon(tabId, pid, slotIdx);
-      const selected = state.picks[tabId]?.[pid]?.[slotIdx] || null;
-
-      // Build dropdown
-      const dropdown = document.createElement('div');
-      dropdown.className = 'pokepicker-dropdown open';
-      dropdown.dataset.picker = pickerId;
-
-      dropdown.innerHTML = `
-    <input class="pokepicker-search" type="text" placeholder="Buscar pokémon..." autocomplete="off" spellcheck="false">
-    <div class="pokepicker-list" id="pklist_${pickerId}"></div>
-    ${selected ? `<button class="pokepicker-clear" onclick="clearPick('${tabId}','${pid}','${slotIdx}')">✕ Quitar selección</button>` : ''}
-  `;
-
-      document.body.appendChild(dropdown);
-      activePickerDropdown = dropdown;
-
-      // Position
-      positionDropdown(dropdown, trigger);
-
-      // Render list
-      renderPickerList(dropdown, pickerId, available, selected, tabId, pid, slotIdx, '');
-
-      // Search input
-      const searchInput = dropdown.querySelector('.pokepicker-search');
-      searchInput.focus();
-      searchInput.addEventListener('input', () => {
-        renderPickerList(dropdown, pickerId, available, selected, tabId, pid, slotIdx, searchInput.value.toLowerCase().trim());
-      });
-      searchInput.addEventListener('keydown', e => {
-        if (e.key === 'Escape') { closePicker(); e.stopPropagation(); }
-      });
-    }
-
-    function positionDropdown(dropdown, trigger) {
-      const rect = trigger.getBoundingClientRect();
-      const spaceBelow = window.innerHeight - rect.bottom;
-      const spaceAbove = rect.top;
-      const dropH = 280;
-
-      dropdown.style.left = Math.min(rect.left, window.innerWidth - 210) + 'px';
-      if (spaceBelow >= dropH || spaceBelow >= spaceAbove) {
-        dropdown.style.top = (rect.bottom + 4) + 'px';
-      } else {
-        dropdown.style.top = (rect.top - dropH - 4) + 'px';
-      }
-    }
-
-    function renderPickerList(dropdown, pickerId, available, selected, tabId, pid, slotIdx, query) {
-      const list = dropdown.querySelector('.pokepicker-list');
-      const filtered = query
-        ? available.filter(p => p.name.includes(query))
-        : available;
-
-      if (filtered.length === 0) {
-        list.innerHTML = `<div class="pokepicker-empty">Sin resultados para "${query}"</div>`;
-        return;
-      }
-
-      // Orden: normal → revivido → bloqueado por gen
-      const sorted = [...filtered].sort((a, b) => {
-        const rankA = a.genBlocked ? 2 : a.revived ? 1 : 0;
-        const rankB = b.genBlocked ? 2 : b.revived ? 1 : 0;
-        return rankA - rankB;
-      });
-
-      list.innerHTML = sorted.slice(0, 100).map(({ name: pk, revived, genBlocked, gen }) => {
-        const sprite = state.pokemonMap[pk]?.sprite || '';
-        const genName = gen > 0 ? GEN_NAMES[gen] : '';
-        const badges = [];
-        if (revived) badges.push(`<span style="font-size:10px;font-weight:700;color:#f59e0b;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);padding:1px 6px;border-radius:20px;flex-shrink:0">💊 Revivido</span>`);
-        if (genBlocked) badges.push(`<span style="font-size:10px;font-weight:700;color:#ef4444;background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.3);padding:1px 6px;border-radius:20px;flex-shrink:0" title="Ya tienes un pokémon de ${genName}">🚫 ${genName}</span>`);
-        if (banned) badges.push(`<span style="font-size:10px;font-weight:700;color:#ef4444;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.4);padding:1px 6px;border-radius:20px;flex-shrink:0">🚫 Baneado</span>`);
-
-        const blocked = genBlocked || banned;
-        return `<div class="pokepicker-item ${pk === selected ? 'selected' : ''}"
-      onclick="${blocked ? `showGenBlockedMsg('${banned ? 'Este pokémon está baneado esta ronda' : `Ya tienes un pokémon de ${genName}`}')` : `selectPick('${tabId}','${pid}','${slotIdx}','${pk}')`}"
-      style="${blocked ? 'opacity:0.45;cursor:not-allowed;' : ''}">
-      ${sprite ? `<img src="${sprite}" alt="${pk}" onerror="this.style.display='none'">` : '<div style="width:28px"></div>'}
-      <span style="flex:1;text-transform:capitalize">${capitalize(pk)}</span>
-      ${badges.join('')}
-    </div>`;
-      }).join('') + (filtered.length > 100 ? `<div class="pokepicker-empty">+${filtered.length - 100} más — escribe para filtrar</div>` : '');
-    }
-
-    function showGenBlockedMsg(genName) {
-      // Mini toast en el dropdown
-      const existing = document.querySelector('.gen-blocked-toast');
-      if (existing) return;
-      const toast = document.createElement('div');
-      toast.className = 'gen-blocked-toast';
-      toast.textContent = `Ya tienes un pokémon de ${genName} en este equipo`;
-      toast.style.cssText = 'position:fixed;bottom:1rem;left:50%;transform:translateX(-50%);background:#1e1e40;border:1px solid rgba(239,68,68,0.5);color:#fca5a5;font-size:13px;padding:8px 16px;border-radius:8px;z-index:9999;pointer-events:none;white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,0.4)';
-      document.body.appendChild(toast);
-      setTimeout(() => toast.remove(), 2000);
-    }
-
-    function selectPick(tabId, pid, slotIdx, pokemon) {
-      closePicker();
-      setPick(tabId, pid, parseInt(slotIdx), pokemon);
-    }
-
-    function clearPick(tabId, pid, slotIdx) {
-      closePicker();
-      setPick(tabId, pid, parseInt(slotIdx), null);
-    }
-
-    function closePicker() {
-      if (activePickerDropdown) {
-        activePickerDropdown.remove();
-        activePickerDropdown = null;
-      }
-      activePicker = { tabId: null, pid: null, slotIdx: null };
-    }
-
-    // Close picker on outside click or scroll
-    document.addEventListener('click', e => {
-      if (activePickerDropdown && !activePickerDropdown.contains(e.target)) closePicker();
-    });
-    document.addEventListener('scroll', closePicker, true);
-
-    // ─── INIT ─────────────────────────────────────────────────────────────────────
+    // ── INIT ───────────────────────────────────────────────────────────────────────
     renderSidebar();
     renderTabs();
     loadPokemon();
