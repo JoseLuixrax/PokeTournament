@@ -2150,6 +2150,34 @@
     renderSidebar();
     renderTabs();
     loadPokemon();
+
+    // Auto-cargar pokemon-draft.json si existe en la misma carpeta
+    fetch('pokemon-draft.json')
+      .then(function (r) {
+        if (!r.ok) return null;
+        return r.json();
+      })
+      .then(function (imp) {
+        if (!imp || !imp.players || !imp.tabs || !imp.picks) return;
+        state.players = imp.players || [];
+        state.tabs = imp.tabs || [];
+        state.picks = imp.picks || {};
+        state.bans = imp.bans || {};
+        state.winners = imp.winners || {};
+        state.revivals = imp.revivals || {};
+        state.survivors = imp.survivors || {};
+        state.activeTab = imp.activeTab || (state.tabs.length > 0 ? state.tabs[0].id : null);
+        var maxId = 0;
+        function exNum(id) { return parseInt((id || '').replace('id_', '')) || 0; }
+        state.players.forEach(function (p) { maxId = Math.max(maxId, exNum(p.id)); });
+        state.tabs.forEach(function (t) {
+          maxId = Math.max(maxId, exNum(t.id));
+          (t.matchups || []).forEach(function (m) { maxId = Math.max(maxId, exNum(m.id)); });
+        });
+        nextId = maxId + 1;
+        renderSidebar(); renderTabs(); renderArena();
+      })
+      .catch(function () { /* No hay JSON, arranca vacío */ });
   </script>
 </body>
 
