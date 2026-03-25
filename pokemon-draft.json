@@ -7810,16 +7810,16 @@
   },
   "bans": {
     "id_11": {
-      "id_1": null,
+      "id_1": "toxapex",
       "id_2": null,
       "id_3": null,
       "id_4": null,
-      "id_5": null,
-      "id_6": null,
+      "id_5": "corviknight",
+      "id_6": "gholdengo",
       "id_7": null,
-      "id_8": null,
-      "id_9": null,
-      "id_10": null
+      "id_8": "gliscor",
+      "id_9": "garchomp",
+      "id_10": "landorus-incarnate"
     }
   },
   "winners": {
