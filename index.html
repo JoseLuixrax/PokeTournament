@@ -1237,6 +1237,265 @@
       transition: color .1s;
     }
 
+    /* ── MOBILE ──────────────────────────────────────────────────────────────── */
+    .mobile-bar {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+
+      /* Header compacto */
+      header {
+        padding: .75rem 1rem;
+        gap: .6rem;
+      }
+
+      .header-logo {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+      }
+
+      header h1 {
+        font-size: 9px;
+      }
+
+      header h1 span {
+        font-size: 7px;
+      }
+
+      .header-actions {
+        gap: .25rem;
+      }
+
+      .btn-sm {
+        padding: 6px 8px;
+        font-size: 11px;
+      }
+
+      /* Ocultar texto de botones en móvil, solo emojis */
+      .header-actions .btn-secondary span.btn-txt,
+      .header-actions .btn-gold span.btn-txt {
+        display: none;
+      }
+
+      /* Layout principal: sin sidebar visible por defecto */
+      .main {
+        height: calc(100vh - 3.5rem - 3rem);
+        flex-direction: column;
+      }
+
+      /* Sidebar se convierte en drawer desde abajo */
+      .sidebar {
+        position: fixed;
+        bottom: 3rem;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-height: 60vh;
+        border-right: none;
+        border-top: 1px solid var(--border2);
+        border-radius: 20px 20px 0 0;
+        z-index: 200;
+        transform: translateY(100%);
+        transition: transform .3s ease;
+        box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.5);
+      }
+
+      .sidebar.open {
+        transform: translateY(0);
+      }
+
+      .sidebar-header {
+        border-radius: 20px 20px 0 0;
+        padding: .75rem 1rem;
+      }
+
+      .sidebar-header::before {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 4px;
+        background: var(--border2);
+        border-radius: 2px;
+        margin: 0 auto .75rem;
+      }
+
+      /* Content ocupa todo */
+      .content {
+        flex: 1;
+        min-height: 0;
+      }
+
+      /* Barra inferior móvil */
+      .mobile-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3rem;
+        background: var(--bg2);
+        border-top: 1px solid var(--border2);
+        z-index: 201;
+        align-items: stretch;
+      }
+
+      .mobile-bar-btn {
+        flex: 1;
+        background: transparent;
+        border: none;
+        color: var(--text2);
+        font-family: 'Outfit', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        transition: all .15s;
+        border-right: 1px solid var(--border);
+      }
+
+      .mobile-bar-btn:last-child {
+        border-right: none;
+      }
+
+      .mobile-bar-btn.active,
+      .mobile-bar-btn:active {
+        color: var(--accent3);
+        background: rgba(124, 58, 237, 0.1);
+      }
+
+      .mobile-bar-btn .mb-icon {
+        font-size: 18px;
+        line-height: 1;
+      }
+
+      .mobile-bar-btn .mb-label {
+        font-size: 9px;
+      }
+
+      /* Overlay para cerrar sidebar */
+      .sidebar-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 199;
+        backdrop-filter: blur(2px);
+      }
+
+      .sidebar-overlay.open {
+        display: block;
+      }
+
+      /* Matchup: apilado en móvil */
+      .matchup-slots {
+        grid-template-columns: 1fr;
+      }
+
+      .vs-divider {
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        padding: .3rem;
+        flex-direction: row;
+      }
+
+      .vs-text {
+        writing-mode: horizontal-tb;
+        transform: none;
+        font-size: 12px;
+      }
+
+      /* Picks: 2 columnas en móvil */
+      .picks-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      /* Arena padding reducido */
+      .arena {
+        padding: .75rem;
+      }
+
+      /* Matchup header más compacto */
+      .matchup-header {
+        font-size: 7px;
+        padding: .5rem .75rem;
+      }
+
+      .matchup {
+        margin-bottom: 1rem;
+      }
+
+      /* Tabs bar más compacta */
+      .tab-btn {
+        padding: .6rem .75rem;
+        font-size: 12px;
+      }
+
+      .tabs-bar {
+        padding: 0 .25rem;
+      }
+
+      /* Standings en móvil */
+      .standings-arena {
+        padding: .75rem;
+      }
+
+      .standings-table th,
+      .standings-table td {
+        padding: .5rem .6rem;
+        font-size: 12px;
+      }
+
+      .standings-table th {
+        font-size: 7px;
+      }
+
+      .pts-badge {
+        font-size: 9px;
+        padding: 2px 6px;
+      }
+
+      /* Winner section en columna en móvil */
+      .winner-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+      }
+
+      .revival-picker {
+        width: 100%;
+      }
+
+      /* Card header */
+      .card-header {
+        padding: .6rem;
+      }
+
+      .card-body {
+        padding: .5rem;
+      }
+
+      .slot {
+        padding: .5rem;
+      }
+
+      /* Empty state */
+      .empty-state {
+        padding: 2rem 1rem;
+      }
+
+      .empty-icon {
+        font-size: 48px;
+      }
+    }
+
     .remove-player-btn:hover {
       color: var(--red);
     }
@@ -1308,6 +1567,31 @@
       </div>
       <div class="arena" id="arena" style="display:none;"></div>
     </div>
+  </div>
+  <!-- Mobile sidebar overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+  <!-- Mobile bottom bar -->
+  <div class="mobile-bar">
+    <button class="mobile-bar-btn" onclick="toggleSidebar()">
+      <span class="mb-icon">👥</span>
+      <span class="mb-label">Jugadores</span>
+    </button>
+    <button class="mobile-bar-btn" onclick="openAddTabModal()">
+      <span class="mb-icon">➕</span>
+      <span class="mb-label">Ronda</span>
+    </button>
+    <button class="mobile-bar-btn" onclick="switchTab('__standings__')">
+      <span class="mb-icon">🏆</span>
+      <span class="mb-label">Clasificación</span>
+    </button>
+    <button class="mobile-bar-btn" onclick="document.getElementById('importFile').click()">
+      <span class="mb-icon">📂</span>
+      <span class="mb-label">Importar</span>
+    </button>
+    <button class="mobile-bar-btn" onclick="exportData()">
+      <span class="mb-icon">💾</span>
+      <span class="mb-label">Exportar</span>
+    </button>
   </div>
   <div class="modal-overlay" id="addTabModal">
     <div class="modal">
@@ -2184,6 +2468,19 @@
         if (e.target === overlay) overlay.classList.remove('open');
       });
     });
+
+    // ── MOBILE SIDEBAR ─────────────────────────────────────────────────────────────
+    function toggleSidebar() {
+      var s = document.querySelector('.sidebar');
+      var o = document.getElementById('sidebarOverlay');
+      var isOpen = s.classList.contains('open');
+      if (isOpen) { s.classList.remove('open'); o.classList.remove('open'); }
+      else { s.classList.add('open'); o.classList.add('open'); }
+    }
+    function closeSidebar() {
+      document.querySelector('.sidebar').classList.remove('open');
+      document.getElementById('sidebarOverlay').classList.remove('open');
+    }
 
     // ── INIT ───────────────────────────────────────────────────────────────────────
     renderSidebar();
