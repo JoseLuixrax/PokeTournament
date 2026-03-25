@@ -7727,7 +7727,7 @@
   "picks": {
     "id_11": {
       "id_1": [
-        null,
+        "mimikyu-disguised",
         null,
         null,
         null,
@@ -7767,7 +7767,7 @@
         null
       ],
       "id_6": [
-        null,
+        "tapu-koko",
         null,
         null,
         null,
@@ -7791,7 +7791,7 @@
         null
       ],
       "id_9": [
-        null,
+        "umbreon",
         null,
         null,
         null,
@@ -7811,12 +7811,12 @@
   "bans": {
     "id_11": {
       "id_1": "toxapex",
-      "id_2": null,
-      "id_3": null,
-      "id_4": null,
+      "id_2": "venusaur",
+      "id_3": "charizard",
+      "id_4": "kingambit",
       "id_5": "corviknight",
       "id_6": "gholdengo",
-      "id_7": null,
+      "id_7": "volcarona",
       "id_8": "gliscor",
       "id_9": "garchomp",
       "id_10": "landorus-incarnate"
