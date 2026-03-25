@@ -45,7 +45,78 @@
     {
       "id": "id_11",
       "name": "Ronda 1",
-      "matchups": [],
+      "matchups": [
+        {
+          "id": "id_12",
+          "slots": [
+            "id_6",
+            null
+          ]
+        },
+        {
+          "id": "id_13",
+          "slots": [
+            "id_1",
+            null
+          ]
+        },
+        {
+          "id": "id_14",
+          "slots": [
+            "id_9",
+            null
+          ]
+        },
+        {
+          "id": "id_15",
+          "slots": [
+            "id_8",
+            null
+          ]
+        },
+        {
+          "id": "id_16",
+          "slots": [
+            "id_10",
+            null
+          ]
+        },
+        {
+          "id": "id_17",
+          "slots": [
+            "id_5",
+            null
+          ]
+        },
+        {
+          "id": "id_18",
+          "slots": [
+            "id_4",
+            null
+          ]
+        },
+        {
+          "id": "id_19",
+          "slots": [
+            "id_7",
+            null
+          ]
+        },
+        {
+          "id": "id_20",
+          "slots": [
+            "id_2",
+            null
+          ]
+        },
+        {
+          "id": "id_21",
+          "slots": [
+            "id_3",
+            null
+          ]
+        }
+      ],
       "playerNames": {
         "id_1": "Dani",
         "id_2": "Jose Luis",
