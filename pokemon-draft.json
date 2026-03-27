@@ -49,70 +49,70 @@
         {
           "id": "id_12",
           "slots": [
-            "id_6",
-            null
+            "id_1",
+            "id_8"
           ]
         },
         {
           "id": "id_13",
           "slots": [
-            "id_1",
-            null
+            "id_2",
+            "id_5"
           ]
         },
         {
           "id": "id_14",
           "slots": [
-            "id_9",
-            null
+            "id_4",
+            "id_6"
           ]
         },
         {
           "id": "id_15",
           "slots": [
-            "id_8",
-            null
+            "id_7",
+            "id_3"
           ]
         },
         {
           "id": "id_16",
           "slots": [
-            "id_10",
-            null
+            "id_9",
+            "id_10"
           ]
         },
         {
           "id": "id_17",
           "slots": [
-            "id_5",
+            null,
             null
           ]
         },
         {
           "id": "id_18",
           "slots": [
-            "id_4",
+            null,
             null
           ]
         },
         {
           "id": "id_19",
           "slots": [
-            "id_7",
+            null,
             null
           ]
         },
         {
           "id": "id_20",
           "slots": [
-            "id_2",
+            null,
             null
           ]
         },
         {
           "id": "id_21",
           "slots": [
-            "id_3",
+            null,
             null
           ]
         }
@@ -7730,81 +7730,81 @@
         "mimikyu-disguised",
         "noivern",
         "great-tusk",
-        null,
-        null,
-        null
+        "scizor",
+        "amoonguss",
+        "slowbro"
       ],
       "id_2": [
         "urshifu-single-strike",
         "kartana",
-        null,
-        null,
-        null,
-        null
+        "tyranitar",
+        "hydreigon",
+        "gardevoir",
+        "heatran"
       ],
       "id_3": [
         "ditto",
         "tapu-lele",
-        null,
-        null,
-        null,
-        null
+        "ting-lu",
+        "latios",
+        "victini",
+        "magnezone"
       ],
       "id_4": [
         "ceruledge",
         "reuniclus",
-        null,
-        null,
-        null,
-        null
+        "copperajah",
+        "mudsdale",
+        "porygon-z",
+        "sableye"
       ],
       "id_5": [
         "hawlucha",
         "pincurchin",
-        null,
-        null,
-        null,
-        null
+        "raging-bolt",
+        "aerodactyl",
+        "weavile",
+        "darmanitan-standard"
       ],
       "id_6": [
         "tapu-koko",
         "iron-valiant",
         "samurott-hisui",
-        null,
-        null,
-        null
+        "mawile",
+        "tornadus-incarnate",
+        "nidoking"
       ],
       "id_7": [
         "rotom",
         "dragonite",
-        null,
-        null,
-        null,
-        null
+        "tapu-fini",
+        "aegislash-shield",
+        "swampert",
+        "zoroark-hisui"
       ],
       "id_8": [
         "revavroom",
         "ferrothorn",
-        null,
-        null,
-        null,
-        null
+        "gastrodon",
+        "gyarados",
+        "latias",
+        "sylveon"
       ],
       "id_9": [
         "umbreon",
         "incineroar",
-        null,
-        null,
-        null,
-        null
+        "manectric",
+        "greninja",
+        "thundurus-incarnate",
+        "hippowdon"
       ],
       "id_10": [
         "excadrill",
         "weezing-galar",
-        null,
-        null,
-        null,
-        null
+        "ogerpon",
+        "zapdos",
+        "goodra",
+        "gallade"
       ]
     }
   },
