@@ -80,41 +80,6 @@
             "id_9",
             "id_10"
           ]
-        },
-        {
-          "id": "id_17",
-          "slots": [
-            null,
-            null
-          ]
-        },
-        {
-          "id": "id_18",
-          "slots": [
-            null,
-            null
-          ]
-        },
-        {
-          "id": "id_19",
-          "slots": [
-            null,
-            null
-          ]
-        },
-        {
-          "id": "id_20",
-          "slots": [
-            null,
-            null
-          ]
-        },
-        {
-          "id": "id_21",
-          "slots": [
-            null,
-            null
-          ]
         }
       ],
       "playerNames": {
@@ -7826,14 +7791,14 @@
     "id_11": {
       "id_1": false,
       "id_2": false,
-      "id_3": false,
+      "id_3": true,
       "id_4": false,
-      "id_5": false,
-      "id_6": false,
+      "id_5": true,
+      "id_6": true,
       "id_7": false,
-      "id_8": false,
+      "id_8": true,
       "id_9": false,
-      "id_10": false
+      "id_10": true
     }
   },
   "revivals": {
@@ -7854,14 +7819,14 @@
     "id_11": {
       "id_1": 0,
       "id_2": 0,
-      "id_3": 0,
+      "id_3": 4,
       "id_4": 0,
-      "id_5": 0,
-      "id_6": 0,
+      "id_5": 3,
+      "id_6": 1,
       "id_7": 0,
-      "id_8": 0,
+      "id_8": 6,
       "id_9": 0,
-      "id_10": 0
+      "id_10": 4
     }
   }
 }
