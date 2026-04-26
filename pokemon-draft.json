@@ -7948,9 +7948,9 @@
       "id_10": true
     },
     "id_18": {
-      "id_1": false,
+      "id_1": true,
       "id_2": false,
-      "id_3": false,
+      "id_3": true,
       "id_4": false,
       "id_5": false,
       "id_6": true,
@@ -7974,9 +7974,9 @@
       "id_10": "ogerpon"
     },
     "id_18": {
-      "id_1": null,
+      "id_1": "jirachi",
       "id_2": null,
-      "id_3": null,
+      "id_3": "tapu-lele",
       "id_4": null,
       "id_5": null,
       "id_6": "zamazenta",
@@ -8000,9 +8000,9 @@
       "id_10": 4
     },
     "id_18": {
-      "id_1": 0,
+      "id_1": 6,
       "id_2": 0,
-      "id_3": 0,
+      "id_3": 4,
       "id_4": 0,
       "id_5": 0,
       "id_6": 1,
