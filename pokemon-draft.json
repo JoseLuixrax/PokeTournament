@@ -147,9 +147,62 @@
         "id_9": "Eric",
         "id_10": "Gaster"
       }
+    },
+    {
+      "id": "id_24",
+      "name": "Ronda 3",
+      "matchups": [
+        {
+          "id": "id_25",
+          "slots": [
+            "id_1",
+            "id_4"
+          ]
+        },
+        {
+          "id": "id_26",
+          "slots": [
+            "id_8",
+            "id_3"
+          ]
+        },
+        {
+          "id": "id_27",
+          "slots": [
+            "id_10",
+            "id_5"
+          ]
+        },
+        {
+          "id": "id_28",
+          "slots": [
+            "id_7",
+            "id_2"
+          ]
+        },
+        {
+          "id": "id_29",
+          "slots": [
+            "id_9",
+            "id_6"
+          ]
+        }
+      ],
+      "playerNames": {
+        "id_1": "Dani",
+        "id_2": "Jose Luis",
+        "id_3": "Oscar",
+        "id_4": "Marcos",
+        "id_5": "Chechu",
+        "id_6": "Carrero",
+        "id_7": "Sillero",
+        "id_8": "Alfredo",
+        "id_9": "Eric",
+        "id_10": "Gaster"
+      }
     }
   ],
-  "activeTab": "id_18",
+  "activeTab": "id_24",
   "allPokemon": [
     "abomasnow",
     "abra",
@@ -7906,6 +7959,88 @@
         "heatran",
         "celesteela"
       ]
+    },
+    "id_24": {
+      "id_1": [
+        "gholdengo",
+        "mamoswine",
+        "latios",
+        "alomomola",
+        "zapdos",
+        "tapu-fini"
+      ],
+      "id_2": [
+        "landorus-incarnate",
+        "venusaur",
+        "iron-valiant",
+        "pincurchin",
+        "porygon2",
+        "salamence"
+      ],
+      "id_3": [
+        "gliscor",
+        "slowking-galar",
+        "kyurem",
+        "gyarados",
+        "kommo-o",
+        "sableye"
+      ],
+      "id_4": [
+        "zapdos-galar",
+        "ting-lu",
+        "incineroar",
+        "ferrothorn",
+        "hoopa",
+        "lopunny"
+      ],
+      "id_5": [
+        "toxapex",
+        "urshifu-single-strike",
+        "pelipper",
+        "meowscarada",
+        "alakazam",
+        "goodra"
+      ],
+      "id_6": [
+        "garchomp",
+        "tyranitar",
+        "reuniclus",
+        "clodsire",
+        "celesteela",
+        "dracozolt"
+      ],
+      "id_7": [
+        "torterra",
+        "greninja",
+        "zeraora",
+        "skarmory",
+        "blaziken",
+        "jellicent-male"
+      ],
+      "id_8": [
+        "thundurus-incarnate",
+        "terapagos",
+        "azumarill",
+        "araquanid",
+        "medicham",
+        "nidoking"
+      ],
+      "id_9": [
+        "zamazenta",
+        "volcarona",
+        "heatran",
+        "moltres",
+        "latias",
+        "forretress"
+      ],
+      "id_10": [
+        "corviknight",
+        "diancie",
+        "swampert",
+        "rotom",
+        "umbreon",
+        "scolipede"
+      ]
     }
   },
   "bans": {
@@ -7932,6 +8067,18 @@
       "id_8": "garchomp",
       "id_9": "tapu-koko",
       "id_10": "great-tusk"
+    },
+    "id_24": {
+      "id_1": "tapu-lele",
+      "id_2": "hawlucha",
+      "id_3": "ogerpon",
+      "id_4": "tapu-koko",
+      "id_5": "excadrill",
+      "id_6": "dragonite",
+      "id_7": "metagross",
+      "id_8": "gastrodon",
+      "id_9": "kingambit",
+      "id_10": "charizard"
     }
   },
   "winners": {
@@ -7957,6 +8104,18 @@
       "id_7": false,
       "id_8": true,
       "id_9": true,
+      "id_10": false
+    },
+    "id_24": {
+      "id_1": false,
+      "id_2": false,
+      "id_3": false,
+      "id_4": false,
+      "id_5": false,
+      "id_6": true,
+      "id_7": false,
+      "id_8": false,
+      "id_9": false,
       "id_10": false
     }
   },
@@ -7984,6 +8143,18 @@
       "id_8": "zapdos",
       "id_9": "ferrothorn",
       "id_10": null
+    },
+    "id_24": {
+      "id_1": null,
+      "id_2": null,
+      "id_3": null,
+      "id_4": null,
+      "id_5": null,
+      "id_6": null,
+      "id_7": null,
+      "id_8": null,
+      "id_9": null,
+      "id_10": null
     }
   },
   "survivors": {
@@ -8009,6 +8180,18 @@
       "id_7": 0,
       "id_8": 3,
       "id_9": 1,
+      "id_10": 0
+    },
+    "id_24": {
+      "id_1": 0,
+      "id_2": 0,
+      "id_3": 0,
+      "id_4": 0,
+      "id_5": 0,
+      "id_6": 5,
+      "id_7": 0,
+      "id_8": 0,
+      "id_9": 0,
       "id_10": 0
     }
   }
